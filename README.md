@@ -3,7 +3,7 @@
 </p>
 
 # __Clinicom__
-## V 1.1.2
+## [V 1.1.2](https://github.com/0cool-design/WEB_Proj)
 >### COMP3700 Spring 2022 Project
 
 ## Pages:
@@ -19,7 +19,7 @@
   
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)  
   
-Some basic Git commands:
+> Some basic Git commands:
 ```
 Create a "repository" (project) with a git hosting tool (like Bitbucket)
 Copy (or clone) the repository to your local machine
