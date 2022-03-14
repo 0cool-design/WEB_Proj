@@ -15,7 +15,7 @@
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧
 - [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧  
    
- > Progress
+ > Progress  
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)  
   
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
