@@ -6,6 +6,13 @@
 
 ## V 1.1.2
 >### COMP3700 - Spring 2022 Proj
+## Pages:
+- [x] About Us
+- [x] Privacy Policy
+- [x] Feedback Survey 
+- [-] Home
+- [-] Appointments
+- [ ] My Profile
 
 Some basic Git commands:
 ```
