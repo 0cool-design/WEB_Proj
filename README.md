@@ -1,4 +1,6 @@
-![logo](https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png)
+<p align="center">
+  <img width="600" height="200" src="https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png">
+</p>
 # Clinicom
 
 ## V 1.1.2
