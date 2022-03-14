@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="600" height="200" src="https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png">
+  <img src="https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png">
 </p>
 # Clinicom
 
