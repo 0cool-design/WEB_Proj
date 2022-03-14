@@ -1,56 +1,68 @@
-*{
-    margin:0;padding: 0;
-    box-sizing: border-box;
-    font-family: Arial,Helvetica,sans-serif;
-}
-body{background-color: #667c8e}
-
-header {
-    display:flex;
-    align-items: center;
-    padding: 10px 1% 0 0;
-}
-.menu{
-    right:0;
-    padding: 20px;
-    padding-bottom:50px ;
-    margin-left: 55%;
-}
-.name{
-    font-size: 55px;
-    padding-bottom: 33px;
-    font-weight: 00;
-    color: darkblue;
-    
-}
-.logo{
-    padding-right: 0px;
-}
-.parag{
-    margin: 0 90px;
-    background-color: gray;
-    
-}
-.nav{
-     width: 30px;
-     display: block;
-     margin: 1em 0 0 1em;
-}
-.nav div{
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    border-radius: 25px;
-}
-.one {
-   width: 30px;
-}
-.two {
-   width: 20px;
-.three {
-   width: 25px;
-    }
-/*
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #667c8e
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 1% 0 0;
+        }
+        
+        .menu {
+            right: 0;
+            padding: 20px;
+            padding-bottom: 50px;
+            margin-left: 55%;
+        }
+        
+        .name {
+            font-size: 55px;
+            padding-bottom: 33px;
+            font-weight: 330;
+            color: darkblue;
+        }
+        
+        .logo {
+            padding-right: 0px;
+        }
+        
+        .parag {
+            margin: 0 90px;
+            background-color: gray;
+        }
+        
+        .nav {
+            width: 30px;
+            display: block;
+            margin: 1em 0 0 1em;
+        }
+        
+        .nav div {
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            border-radius: 25px;
+        }
+        
+        .one {
+            width: 30px;
+        }
+        
+        .two {
+            width: 20px;
+        }
+        
+        .three {
+            width: 25px;
+        }
+        /*
 li{
     font-weight: 500;
     font-size:50px;
