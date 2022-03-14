@@ -13,8 +13,8 @@
 - [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🐛
 - [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) 🐛
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧
-- [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)
+- [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧  
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)  
 Some basic Git commands:
 ```
 Create a "repository" (project) with a git hosting tool (like Bitbucket)
