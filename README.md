@@ -17,7 +17,8 @@
    
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)  
   
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)  
+  
 Some basic Git commands:
 ```
 Create a "repository" (project) with a git hosting tool (like Bitbucket)
