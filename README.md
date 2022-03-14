@@ -4,7 +4,7 @@
 ## V 1.1.2
 >### COMP3700 - Spring 2022 Proj
 
-Some basic Git commands are:
+Some basic Git commands:
 ```
 Create a "repository" (project) with a git hosting tool (like Bitbucket)
 Copy (or clone) the repository to your local machine
@@ -18,4 +18,5 @@ Open a "pull request" (propose changes to the main branch)
 ```
 
 - [Git Tutorial](https://youtu.be/DVRQoVRzMIY)
+![logo](https://logos-world.net/wp-content/uploads/2020/11/Google-Drive-Logo.png)
 - Files[Drive](https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT)
