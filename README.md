@@ -24,20 +24,6 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   
 [![licensebuttons by-nc](https://licensebuttons.net/l/by-nc/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0)
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)  
   
-> Some basic Git commands:
-```
-Create a "repository" (project) with a git hosting tool (like Bitbucket)
-Copy (or clone) the repository to your local machine
-Add a file to your local repo and "commit" (save) the changes
-"Push" your changes to your main branch
-Make a change to your file with a git hosting tool and commit
-"Pull" the changes to your local machine
-Create a "branch" (version), make a change, commit the change
-Open a "pull request" (propose changes to the main branch)
-"Merge" your branch to the main branch
-```
-
-- [Git Tutorial](https://youtu.be/DVRQoVRzMIY)
 - Files: [Drive](https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT)
