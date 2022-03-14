@@ -15,6 +15,7 @@
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧
 - [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧  
    
+ > Progress
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)  
   
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -22,8 +23,8 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
   
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
 [![licensebuttons by-nc](https://licensebuttons.net/l/by-nc/3.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
   
 > Some basic Git commands:
 ```
