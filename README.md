@@ -17,7 +17,8 @@
    
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/84)  
   
-[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)  
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://opensource.org/)
+[![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
   
 > Some basic Git commands:
 ```
