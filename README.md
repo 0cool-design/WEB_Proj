@@ -2,7 +2,7 @@
   <img src="https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png">
 </p>
 
-# - Clinicom -
+# __Clinicom__
 ## V 1.1.2
 >### COMP3700 Spring 2022 Project
 
