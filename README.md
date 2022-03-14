@@ -3,9 +3,9 @@
 </p>
 
 # Clinicom
-
 ## V 1.1.2
->### COMP3700 - Spring 2022 Proj
+>### COMP3700 Spring 2022 Project
+
 ## Pages:
 - [x] [About Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/about.html)✅
 - [x] [Privacy Policy](https://github.com/0cool-design/WEB_Proj/blob/main/www/policy.html) ✅
