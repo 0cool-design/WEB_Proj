@@ -14,5 +14,6 @@ Create a "branch" (version), make a change, commit the change
 Open a "pull request" (propose changes to the main branch)
 "Merge" your branch to the main branch
 ```
-[Git Tutorial] (https://youtu.be/DVRQoVRzMIY).
-Files [Drive] (https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT).
+
+[Git Tutorial](https://youtu.be/DVRQoVRzMIY)
+Files[Drive](url)[https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT]
