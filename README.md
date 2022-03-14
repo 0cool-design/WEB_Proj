@@ -18,4 +18,4 @@ Open a "pull request" (propose changes to the main branch)
 ```
 
 - [Git Tutorial](https://youtu.be/DVRQoVRzMIY)
-- Files[Drive](https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT)
+- Files: [Drive](https://drive.google.com/drive/u/1/folders/15W1RpJ4_eHC8mj1wnxQvZqJ8cgO4sRNT)
