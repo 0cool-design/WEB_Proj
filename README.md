@@ -10,10 +10,10 @@
 - [x] [About Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/about.html) ✅
 - [x] [Privacy Policy](https://github.com/0cool-design/WEB_Proj/blob/main/www/policy.html) ✅
 - [x] [Feedback Survey](https://github.com/0cool-design/WEB_Proj/blob/main/www/feedback.html) ✅
-- [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🐛
-- [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) 🐛
-- [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧
-- [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧  
+- [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🐛  
+- [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) 🐛 
+- [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🐛
+- [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧   
 - [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🚧  
    
  > Progress  
