@@ -10,14 +10,14 @@
 - [x] [About Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/about.html) ✅
 - [x] [Privacy Policy](https://github.com/0cool-design/WEB_Proj/blob/main/www/policy.html) ✅
 - [x] [Feedback Survey](https://github.com/0cool-design/WEB_Proj/blob/main/www/feedback.html) ✅
+- [x] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) ✅
 - [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🐛  
-- [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) 🐛 
 - [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🐛
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧   
 - [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🚧  
    
  > Progress  
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/76)  
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/78)  
   
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
