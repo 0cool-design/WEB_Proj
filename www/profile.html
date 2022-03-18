@@ -14,7 +14,7 @@
     <style>
         li {
             border-collapse: collapse;
-            border: 1em soild black;
+            border: 1px soild black;
             list-style: none;
             padding: 30px;
             text-decoration: none;
@@ -73,13 +73,73 @@
                 </ul>
             </div>
             <div class="col-9">
-                <p>Name:</p>
-                <p>Age:</p>
-                <p>Nationailty:</p>
+                <!-- this part will need java script to hide and show elements -->
+                <div class="edit_profile">
+                    <p>Name:<span class="p_name"></span></p>
+                    <p>Age:<span class="p_age"></span></p>
+                    <p>Nationailty:<span class="p_nation"></span></p>
+                </div>
+                <div class="Appointments">
+                    <p id="ap_date"></p>
+                    <p></p>
+                    <p></p>
+                </div>
 
             </div>
         </div>
     </div>
 
-
+    <footer>
+        <!-- Footer Starts Here -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo">
+                            <a href="index.html"> <img src="assets/imgs/logooo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="policy.html">Privacy Policy</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="https://www.instagram.com/0_co0l"><em class="fa fa-instagram"></em></a></li>
+                                <li><a href="https://api.whatsapp.com/send/?phone=968999999"><em class="fa fa-phone"></em></a></li>
+                                <li><a href="mailto:support@clinicom.com?subject=title&body=Message"><em class="fa fa-envelope"></em></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Ends Here -->
+    
+    
+        <!-- Sub Footer Starts Here -->
+        <div class="sub-footer">
+            <button onclick="myFunction()">☀️🌑</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sub Footer Ends Here -->
+    
+    </footer>
 </body>
