@@ -15,6 +15,7 @@
 - [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🐛
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧   
 - [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🚧  
+- [ ] [FAQ](https://github.com/0cool-design/WEB_Proj/blob/main/www/faq.html) 🚧  
    
  > Progress  
 ![](https://us-central1-progress-markdown.cloudfunctions.net/progress/78)  
