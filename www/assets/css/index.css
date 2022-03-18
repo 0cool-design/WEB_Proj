@@ -6,7 +6,8 @@
         }
         
         body {
-            background-color: #ffffff
+            background: rgb(255, 255, 255);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 99, 121, 1) 100%);
         }
         
         header {
@@ -62,36 +63,3 @@
         .three {
             width: 25px;
         }
-        /*
-li{
-    font-weight: 500;
-    font-size:50px;
-    color:dodgerblue;
-    text-decoration: none;
-}
-
-header{
-    background-color: azure;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding:30px 10%;
-}
-
-.logo{
-    cursor: pointer;
-}
-.nav_links{
-    list-style: none;
-    padding: 0px 20px;
-}
-
-.menu{
-    padding: 9px 25px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-.menu:hover{
-    
-}*/
