@@ -2,148 +2,149 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>My Profile</title>
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
-  <!-- bootstrap & css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/design.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <link rel="stylesheet" href="assets/css/icons.css">
-  <style>
-    @font-face {
-      src: url(assets/fonts/rog.ttf);
-      font-family: rog;
-    }
-
-    li {
-      border-collapse: collapse;
-      border: 1px soild black;
-      list-style: none;
-      padding: 30px;
-      text-decoration: none;
-      text-align: left;
-      font-size: 20px;
-      font-family: monospace, fantasy, sans-serif;
-      color: darkcyan;
-    }
-
-    #list {
-      border: 1px solid black;
-      margin: 5px 10px 200px 10px;
-    }
-
-    .col-3 {
-      background-color: skyblue;
-    }
-
-    p {
-      font-size: 17px;
-      padding: 3px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="utf-8">
+    <title>My Profile</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
+    <!-- bootstrap & css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/design.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <style>
+        @font-face {
+            src: url(assets/fonts/rog.ttf);
+            font-family: rog;
+        }
+        
+        li {
+            border-collapse: collapse;
+            border: 1px soild black;
+            list-style: none;
+            padding: 30px;
+            text-decoration: none;
+            text-align: left;
+            font-size: 20px;
+            font-family: monospace, fantasy, sans-serif;
+            color: darkcyan;
+        }
+        
+        #list {
+            border: 1px solid black;
+            margin: 5px 10px 200px 10px;
+        }
+        
+        .col-3 {
+            background-color: skyblue;
+        }
+        
+        p {
+            font-size: 17px;
+            padding: 3px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-  <div id="pre-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <span></span>
+    <div id="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span></span>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- Navigation -->
-  <table>
-    <th>
-      <a href="index.html"><img class="logo" src="assets/imgs/logooo.png" alt="logo.pic"></a>
-    </th>
-    <td class="name">Clinicom</td>
-  </table>
-  <div>
-    <h2 style="margin-left: 15px;font-weight:350;font-family:serif;font-weight:bold">My Profile</h2>
-    <hr>
-  </div>
-
-  <div style="position: relative" class="container" id="list">
-    <div class="row">
-      <div class="col-3">
-        <ul>
-          <li> <a href="#">Edit profile</a> </li>
-          <li> <a href="#">Appointments</a> </li>
-          <li> <a href="#">Test results</a> </li>
-        </ul>
-      </div>
-      <div class="col-9">
-        <!-- this part will need java script to hide and show elements -->
-        <div class="edit_profile">
-          <p>Name:<span class="p_name"></span></p>
-          <p>Age:<span class="p_age"></span></p>
-          <p>Nationailty:<span class="p_nation"></span></p>
-        </div>
-        <div class="Appointments">
-          <p id="ap_date"></p>
-          <p></p>
-          <p></p>
-        </div>
-
-      </div>
+    <!-- Navigation -->
+    <table>
+        <th>
+            <a href="index.html"><img class="logo" src="assets/imgs/logooo.png" alt="logo.pic"></a>
+        </th>
+        <td class="name">Clinicom</td>
+    </table>
+    <div>
+        <h2 style="margin-left: 15px;font-weight:350;font-family:serif;font-weight:bold">My Profile</h2>
+        <hr>
     </div>
-  </div>
 
-  <footer>
-    <!-- Footer Starts Here -->
-    <div class="footer">
-      <div class="container">
+    <div style="position: relative" class="container" id="list">
         <div class="row">
-          <div class="col-md-12">
-            <div class="logo">
-              <a href="index.html"> <img src="assets/imgs/logooo.png" alt=""></a>
+            <div class="col-3">
+                <ul>
+                    <li> <a href="#">Edit profile</a> </li>
+                    <li> <a href="#">Appointments</a> </li>
+                    <li> <a href="#">Test results</a> </li>
+                </ul>
             </div>
-          </div>
-          <div class="col-md-12">
-            <div class="footer-menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="policy.html">Privacy Policy</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
+            <div class="col-9">
+                <!-- this part will need java script to hide and show elements -->
+                <div class="edit_profile">
+                    <p>Name:<span class="p_name"></span></p>
+                    <p>Age:<span class="p_age"></span></p>
+                    <p>Nationailty:<span class="p_nation"></span></p>
+                </div>
+                <div class="Appointments">
+                    <p id="ap_date"></p>
+                    <p></p>
+                    <p></p>
+                </div>
+
             </div>
-          </div>
-          <div class="col-md-12">
-            <div class="social-icons">
-              <ul>
-                <li><a href="https://www.instagram.com/0_co0l"><em class="fa fa-instagram"></em></a></li>
-                <li><a href="https://api.whatsapp.com/send/?phone=968999999"><em class="fa fa-phone"></em></a></li>
-                <li><a href="mailto:support@clinicom.com?subject=title&body=Message"><em class="fa fa-envelope"></em></a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <!-- Footer Ends Here -->
 
-
-    <!-- Sub Footer Starts Here -->
-    <div class="sub-footer">
-      <button onclick="myFunction()">☀️🌑</button>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="copyright-text">
-              <p>Copyright &copy; 2022</p>
+    <footer>
+        <!-- Footer Starts Here -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo">
+                            <a href="index.html"> <img src="assets/imgs/logooo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="policy.html">Privacy Policy</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="https://www.instagram.com/0_co0l"><em class="fa fa-instagram"></em></a></li>
+                                <li><a href="https://api.whatsapp.com/send/?phone=968999999"><em class="fa fa-phone"></em></a></li>
+                                <li><a href="mailto:support@clinicom.com?subject=title&body=Message"><em class="fa fa-envelope"></em></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <!-- Sub Footer Ends Here -->
+        <!-- Footer Ends Here -->
 
-  </footer>
+
+        <!-- Sub Footer Starts Here -->
+        <div class="sub-footer">
+            <button onclick="myFunction()">☀️🌑</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Sub Footer Ends Here -->
+
+    </footer>
 </body>
