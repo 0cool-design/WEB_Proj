@@ -16,27 +16,27 @@
             src: url(assets/fonts/rog.ttf);
             font-family: rog;
         }
-
+        
         #cont_form {
             border: 1px solid black;
             margin: 180px 20px 9px 0px;
         }
-
+        
         .container {
             align-content: center;
             justify-items: center;
             justify-content: center;
         }
-
+        
         .form-control {
             margin: 30px;
         }
-
+        
         .table {
             padding: 90px 90px;
         }
         /*        this edits the descrition of the contact us*/
-
+        
         .th_des {
             border-right: 1px solid gray;
             padding: 0px 15px;
@@ -45,12 +45,12 @@
             text-align: center;
             position: flex;
         }
-
+        
         .message {
             margin-left: 50px;
             margin-right: 50px;
         }
-
+        
         .col {
             padding-right: 0px;
             margin-right: 70px;
@@ -85,61 +85,61 @@
         <span class="navbar-toggler-icon"></span>
       </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="feedback.html"> Feedback</a>
-                      <span class="sr-only">(current)</span>
-                      </a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="about.html">About Us</a>
-                      <span class="sr-only">(current)</span>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="appointments.html">Book an Appointment</a>
-                  </li>
-              </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html"> Feedback</a>
+                        <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">About Us</a>
+                        <span class="sr-only">(current)</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="appointments.html">Book an Appointment</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Page Content -->
     <section class="container">
-    <table id="cont_form" >
-        <th class="th_des">
-            <h2 style="name"> Contact Us </h2>
-            <p>phone number</p>
-            <p> <a href="mailto:support@clinicom.com" rel="external nofollow noopener" target="_blank">support@clinicom.com</a> </p>
-        </th>
-        <td style="padding-left:0px;justify-items:center;justify-content:center;">
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                        <input style="margin-bottom: 0px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small style="margin-left: 34px" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <table id="cont_form">
+            <th class="th_des">
+                <h2 style="name"> Contact Us </h2>
+                <p>phone number</p>
+                <p> <a href="mailto:support@clinicom.com" rel="external nofollow noopener" target="_blank">support@clinicom.com</a> </p>
+            </th>
+            <td style="padding-left:0px;justify-items:center;justify-content:center;">
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                            <input style="margin-bottom: 0px" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small style="margin-left: 34px" id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                            <input type="text" class="form-control" placeholder="Phone Number">
+                        </div>
                     </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                        <input type="text" class="form-control" placeholder="Phone Number">
+                    <div class="message">
+                        <label style="margin-left: 30px" vfor="exampleFormControlTextarea1">Message</label>
+                        <textarea style="margin-top: 0px" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message here..."></textarea>
+                        <button style="margin: 0px 0px 22px 29px; border-radius: 20px" type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </div>
-                <div class="message">
-                    <label style="margin-left: 30px" vfor="exampleFormControlTextarea1">Message</label>
-                    <textarea style="margin-top: 0px" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message here..."></textarea>
-                    <button style="margin: 0px 0px 22px 29px; border-radius: 20px" type="submit" class="btn btn-primary">Submit</button>
-                </div>
 
-            </form>
-        </td>
-    </table>
-</section>
+                </form>
+            </td>
+        </table>
+    </section>
 </body>
 <!-- Footer Starts Here -->
 <footer>
@@ -180,14 +180,6 @@
 
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
-        <button onclick="myFunction()">☀️🌑</button>
-
-        <script>
-            function myFunction() {
-                var element = document.body;
-                element.classList.toggle("dark-mode");
-            }
-        </script>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
