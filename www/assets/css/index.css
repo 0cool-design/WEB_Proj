@@ -17,6 +17,7 @@
           display: flex;
           align-items: center;
           padding: 10px 1% 0 0;
+          justify-content: space-between;
         }
 
         .menu {
