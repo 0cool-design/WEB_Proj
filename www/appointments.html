@@ -14,17 +14,17 @@
     <style>
         @font-face {
             src: url(assets/fonts/rog.ttf);
-            font-family: rog;
+            font-family: rog
         }
-        
+
         .form-check form-check-inline {
             padding-top: 1px;
         }
-        
+
         .form-control {
             margin-top: 35px;
         }
-        
+
         #files {
             margin-top: 50px;
         }
@@ -106,7 +106,7 @@
                             <input type="number" id="typeNumber" class="form-control" placeholder="Age" />
                         </div>
                         <div class="form-outline">
-                            <input type="number" id="typePhone" class="form-control" placeholder="Phone Number" />
+                            <input type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" />
                         </div>
                         <div class="form-group" id="files">
                             <label for="exampleFormControlFile1">Upload any relevent files</label>
