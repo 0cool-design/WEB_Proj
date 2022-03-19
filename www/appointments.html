@@ -16,17 +16,21 @@
             src: url(assets/fonts/rog.ttf);
             font-family: rog
         }
-        
+
         .form-check form-check-inline {
             padding-top: 1px;
         }
-        
+
         .form-control {
             margin-top: 35px;
         }
-        
+
         #files {
             margin-top: 50px;
+        }
+        #navbar-margin{
+            margin-bottom: 70px;
+            
         }
     </style>
 </head>
@@ -49,7 +53,7 @@
         </th>
         <td class="name">Clinicom</td>
     </table>
-    <div>
+    <div id="navbar-margin">
         <nav class="navbar navbar-expand-lg navbar-dark static-top">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,7 +111,7 @@
                         </div>
                         <div class="form-outline">
                             <input type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" />
-                            <p>Format: 99999999</p>
+                            <p>Format: 12345678</p>
                         </div>
                         <div class="form-group" id="files">
                             <label for="exampleFormControlFile1">Upload any relevent files</label>
