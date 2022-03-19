@@ -495,6 +495,7 @@ a {
 .about-page {
 	margin-top: 50px;
     margin-bottom: 80px;
+	padding-top: 80px;
 }
 .about-page .right-content h4 {
 	font-size: 17px;
