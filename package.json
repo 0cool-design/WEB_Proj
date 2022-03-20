@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/0cool-design/WEB_Proj/issues"
   },
-  "homepage": "https://github.com/0cool-design/WEB_Proj#readme"
+  "homepage": "https://github.com/0cool-design/WEB_Proj#readme",
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-uncss": "^0.10.1"
+  }
 }
