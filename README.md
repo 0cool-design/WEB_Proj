@@ -3,7 +3,7 @@
 </p>
 
 # __Clinicom__
-## [V 1.1.3](https://github.com/0cool-design/WEB_Proj)
+## [V 1.2.1 Beta](https://github.com/0cool-design/WEB_Proj)
 >### COMP3700 Spring 2022 Project
 
 ## Pages:
