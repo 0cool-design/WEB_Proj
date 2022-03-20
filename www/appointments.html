@@ -16,19 +16,19 @@
             src: url(assets/fonts/rog.ttf);
             font-family: rog
         }
-        
+
         .form-check form-check-inline {
             padding-top: 1px;
         }
-        
+
         .form-control {
             margin-top: 35px;
         }
-        
+
         #files {
             margin-top: 50px;
         }
-        
+
         #navbar-margin {
             margin-bottom: 70px;
         }
@@ -145,7 +145,8 @@
           <option value="10">Muscat</option>
           <option value="11">Khasab</option>
         </select>
-                        <input type="text" class="form-control" placeholder="Appointment Date">
+                        <input type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" class="form-control" placeholder="Appointment Date">
+                        <p>Format: dd/mm/yyyy</p>
 
                     </div>
                 </div>
