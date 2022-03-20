@@ -37,7 +37,10 @@
 
         .logo {
           padding-right: 0px;
-          
+          tit
+        }
+        .logo:hover{
+          title:"Home"
         }
 
         .parag {
