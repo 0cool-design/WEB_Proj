@@ -3,7 +3,7 @@
 </p>
 
 # __Clinicom__
-## [V 1.1.3](https://github.com/0cool-design/WEB_Proj)
+## [V 1.2.1 Beta](https://github.com/0cool-design/WEB_Proj)
 >### COMP3700 Spring 2022 Project
 
 ## Pages:
@@ -15,7 +15,7 @@
 - [x] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) ✅  
 - [x] [FAQ](https://github.com/0cool-design/WEB_Proj/blob/main/www/faq.html) ✅
 - [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🐛  
-- [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🚧  
+- [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🐛   
 
    
  > Progress  
