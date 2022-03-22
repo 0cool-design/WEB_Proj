@@ -12,18 +12,11 @@ function imgSrcToLink1(event) {
 function imgSrcToLink2(event) {
     event.preventDefault();
     var imgSrc = document.getElementById("Img2").src;
-    window.location = "index.html?ver=" + imgSrc + "&price=" + p;
+    window.location = "index.html?ver=" + imgSrc;
 }
 
 function imgSrcToLink3(event) {
     event.preventDefault();
     var imgSrc = document.getElementById("Img3").src;
     window.location = "index.html?ver=" + imgSrc;
-}
-
-//function to transfer the value of quantity from singl-page.html to cart.html
-function passValue() {
-    var qty = document.getElementById("quantity").value;
-    localStorage.setItem("textvalue", qty);
-    return false;
 }
