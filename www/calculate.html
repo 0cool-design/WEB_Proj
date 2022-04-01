@@ -18,6 +18,9 @@
             src: url(assets/fonts/rog.ttf);
             font-family: rog;
         }
+        #navbar-margin {
+            margin-bottom: 15%;
+        }
     </style>
 </head>
 
@@ -34,12 +37,15 @@
         </div>
     </div>
     <!-- Navigation -->
-    <table>
-        <th>
-            <a href="index.html"><img class="logo" src="assets/imgs/logooo.png" alt="logo.pic" title="Home"></a>
-        </th>
-        <td class="name">Clinicom</td>
-    </table>
+    <header>
+        <table>
+            <th>
+                <a href="index.html"><img class="logo" src="assets/imgs/logooo.png" alt="logo.pic" title="Home"></a>
+            </th>
+            <td class="name">Clinicom</td>
+        </table>
+    </header>
+    <div id="navbar-margin">
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +61,7 @@
                         <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                         <span class="sr-only">(current)</span>
                     </li>
@@ -69,5 +75,123 @@
             </div>
         </div>
     </nav>
+    </div>
     <!-- Page Content -->
+    <section class="container">
+        <h1>Clinincom Store</h1><br><br>
+        <h3>Medications section:</h3>
+        <div>
+            <table  class="table">
+                <!-- first row -->
+                <thead>
+                  <tr  style="border-spacing: 40px;">
+                    <th scope="col"><img src="assets/imgs/adol2.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="adol_num">0</span>
+                    </th>
+                    
+                    <th scope="col"><img src="assets/imgs/panadol.avif" alt="panadol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="panadol_num">0</span>
+                    </th>
+                    <th scope="col"><img src="assets/imgs/ventolin.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="ventolin_num">0</span>
+                    </th>
+                    <th scope="col"><img src="assets/imgs/anitbiotics.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span  style="margin:85px 0px 0px 10px" id="anitbio_num">0</span>
+                    </th>
+                  </tr>
+                </thead>
+        <!-- second row -->
+                <tbody>
+                  <tr  style="border-spacing: 40px;">
+                    <th scope="col"><img src="assets/imgs/adol2.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="adol_num">0</span>
+                    </th>
+                    
+                    <th scope="col"><img src="assets/imgs/panadol.avif" alt="panadol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="panadol_num">0</span>
+                    </th>
+                    <th scope="col"><img src="assets/imgs/ventolin.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span style="margin:85px 0px 0px 10px" id="ventolin_num">0</span>
+                    </th>
+                    <th scope="col"><img src="assets/imgs/anitbiotics.png" alt="adol" height="200px">
+                        <br>
+                        <button style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                        <span  style="margin:85px 0px 0px 10px" id="anitbio_num">0</span>
+                    </th>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </section>
+</body>
+<footer>
+    <!-- Footer Starts Here -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo">
+                        <a href="index.html"> <img src="assets/imgs/logooo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="feedback.html">Feedback</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="policy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="https://www.instagram.com/0_co0l"><em class="fa fa-instagram"></em></a></li>
+                            <li><a href="tel:+96897744003"><em class="fa fa-phone"></em></a></li>
+                            <li><a href="mailto:support@clinicom.om"><em class="fa fa-envelope"></em></a></li>
+                            <li><a href="fun.html"><em class="fa fa-gamepad"></em></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Ends Here -->
+
+
+    <!-- Sub Footer Starts Here -->
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Footer Ends Here -->
+
+</footer>
+
+    
 </body>
