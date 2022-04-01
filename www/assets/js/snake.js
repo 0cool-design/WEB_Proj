@@ -10,7 +10,7 @@ const gameover = new Image();
 gameover.src = "assets/imgs/gameover.png";
 
 const foodImg = new Image();
-foodImg.src = "assets/imgs/food.png";
+foodImg.src = "assets/imgs/medicine.png";
 
 let dead = new Audio();
 let eat = new Audio();
