@@ -12,3 +12,4 @@ console.log(date)
 window.onload = function(){
     moving();
 }
+
