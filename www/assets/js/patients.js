@@ -32,16 +32,21 @@ function patients() {
 
 
 
-    var patients = [mazin, abdulaziz, Hamood, mohammed]
-    var k = 0
+    var patients = [mazin, abdulaziz, Hamood, mohammed];
+    // populate table with data
+    for (var i = 0; i < patients.length; i++) {
+        var tr = t1.insertRow(i + 1);
 
-    patients.forEach((patients, index, tr = t1.insertRow(index + 1)) => {
-        //tr = t1.insertRow(index+1)
-        for (let key in patients) {
-            var cell = tr.insertCell(k);
-            cell.innerText = `${patients[key]}`;
-            k++
-        }
-    });
+        var cell = tr.insertCell(0);
+        cell.innerText = patients[i].name;
 
+        var cell = tr.insertCell(1);
+        cell.innerText = patients[i].phone;
+
+        var cell = tr.insertCell(2);
+        cell.innerText = patients[i].Email;
+
+        var cell = tr.insertCell(3);
+        cell.innerText = patients[i].Date;
+    }
 }
