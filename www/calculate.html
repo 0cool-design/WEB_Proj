@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/design.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/icons.css">
+    <script src="assets/js/calculate.js"></script>
     <style media="screen">
         @font-face {
             src: url(assets/fonts/rog.ttf);
@@ -84,23 +85,23 @@
                     <tr style="border-spacing: 40px;">
                         <th scope="col"><img src="assets/imgs/adol2.png" alt="adol" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="adol_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success" onclick="adol()">Add to cart <br> 2 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="adol_num">0</span>
                         </th>
 
                         <th scope="col"><img src="assets/imgs/panadol.avif" alt="panadol" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="panadol_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success" onclick="panadol()">Add to cart <br> 1 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="panadol_num">0</span>
                         </th>
                         <th scope="col"><img style="padding-left:20px ;" src="assets/imgs/ventolin.png" alt="ventolin" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="ventolin_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success"onclick="ventolin()">Add to cart <br> 1.5 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="ventolin_num">0</span>
                         </th>
                         <th scope="col"><img src="assets/imgs/anitbiotics.png" alt="anitbiotics" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="anitbio_btn" style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success"onclick="Biotic()">Add to cart <br> 3 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="anitbio_num">0</span>
                         </th>
                     </tr>
@@ -110,33 +111,34 @@
                     <tr style="border-spacing: 40px;">
                         <th scope="col"><img src="assets/imgs/vaporub.png" alt="vaporub" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="vaporub_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success"onclick="vaporub()">Add to cart <br> 0.5 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="vaporub_num">0</span>
                         </th>
 
                         <th scope="col"><img src="assets/imgs/bandaid.png" alt="bandaid" height="200px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="bandaid_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success"onclick="bandaid()">Add to cart <br> 0.8 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="bandaid_num">0</span>
                         </th>
                         <th scope="col"><img src="assets/imgs/strepsils.png" alt="strepsils" height="190px">
                             <br>
-                            <button style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success">Add to cart</button>
+                            <button id="strepsils_btn" style="margin: 10px 0px 2px 50px;" type="button" class="btn btn-outline-success"onclick="streplis()">Add to cart <br> 1 OMR</button>
                             <span style="margin:85px 0px 0px 10px" id="strepsils_num">0</span>
                         </th>
                         <th scope="col"><img style="padding-left:20px ;" src="assets/imgs/elasticknee.png" alt="elastic knee" height="210px">
                             <br>
-                            <button style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success">Add to cart</button>
-                            <span style="margin:85px 0px 0px 10px" id="elastic_num">0</span>
+                            <button id="elastic_btn" style="margin: 10px 0px 2px 80px;" type="button" class="btn btn-outline-success"onclick="knee()">Add to cart <br> 1.8 OMR</button>
+                            <span style="margin:85px 0px 0px 10px;" id="elastic_num">0</span>
                         </th>
                     </tr>
 
                 </tbody>
             </table>
             <hr>
-            <div style="margin-top: 50px;">
-                <h3>Additional Services</h3>
-            </div>
+            <!-- total section -->
+            <h2 style="font-weight: bold;">CheckOut</h2><br>
+            <button style="margin-bottom: 20px;" id="getTotal"type="button" class="btn btn-outline-success" onclick="getTotal()">Get Total</button>
+            <h4>Total = <span id="total"></span></h4>
         </div>
     </section>
 </body>
