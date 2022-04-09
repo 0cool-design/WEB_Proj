@@ -168,21 +168,6 @@ function discount() {
     } else {
         document.getElementById("disc-msg").innerHTML = "Invalid discount code";
     }
-
-    // if ($("discount_code").value != "" && $("#discount_code1").val() == "15OF") {
-    //     var discount_per = 15;
-    //     var discount_amount = parseInt((total * discount_per) / 100);
-    //     discount_amount = total - discount_amount;
-    //     alert("great u got a discount")
-
-    // } else {
-    //     $("#discount-html").css("display", "none !important");
-    //     $("#total_cart_amt").html(total + ".00");
-    //     $("#discount_charge").html("00.00")
-    //     error_trw.html("Invalid Discount Code!");
-    //     alert("wrong discount code")
-    // }
-
 }
 
 function sudo() {
@@ -190,5 +175,40 @@ function sudo() {
 }
 
 function back() {
-    sudo = discount;
+    sudo = discountpic}
+//products XHTML table functions
+var pAdol = {name:"adol",pic:"assets/imgs/adol2.png",price:"2"};
+var  pPanadol= {name:"panadol",pic:"assets/imgs/panadol.avif",price:"1"};
+var pVentolin = {name:"ventolin",pic:"assets/imgs/ventolin.png",price:"1.5"};
+var pAntiBiotic = {name:"antiBiotic",pic:"assets/imgs/anitbiotics.png",price:"3"};
+var pVaporub = {name:"vaporub",pic:"assets/imgs/vaporub.png",price:"0.5"};
+var pBandaid = {name:"bandaid",pic:"assets/imgs/bandaid.png",price:"0.8"};
+var pStrepslis = {name:"strepslis",pic:"assets/imgs/strepsils.png",price:"1"};
+var pElastic = {name:"elastic",pic:"assets/imgs/elasticknee.png",price:"1.8"};
+
+var products = [pAdol,pPanadol,pVentolin,pAntiBiotic,pVaporub,pBandaid,pStrepslis,pElastic];
+
+function loadProducts(){
+    // get table document object
+    var t1 = document.getElementById("productsTable");
+
+    // get number of rows that already exist and delete them
+    var pRows = t1.rows.length;
+    for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
+    //get num of rows
+    var numRows = products.length/4;
+    // populate table with data
+    for (var i = 0; i < numRows; i++) {
+        var tr = t1.insertRow(i);
+
+        var cell = tr.insertCell(0);
+        cell.innerHTML = "<img src="+products[i].pic+" alt='dsdsd'>";
+       
+
+        var cell = tr.insertCell(1);
+        cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd'>";
+        var cell = tr.insertCell(2);
+        cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd'>";
+        var cell = tr.insertCell(3);
+        cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd'>";    }
 }
