@@ -10,17 +10,14 @@ let nElastic = 0;
 
 
 
-function getTotal() {
-    document.getElementById("total").innerHTML = total + "  OMR";
 
-}
 
 //get total for adol
 function adol() {
     total += 2;
     nAdol += 1
     document.getElementById("adol_num").innerHTML = nAdol
-
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_adol() {
@@ -28,6 +25,7 @@ function rm_adol() {
         total -= 2;
         nAdol -= 1
         document.getElementById("adol_num").innerHTML = nAdol
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -37,7 +35,7 @@ function panadol() {
     total += 1;
     nPandol += 1
     document.getElementById("panadol_num").innerHTML = nPandol
-
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_panadol() {
@@ -45,6 +43,7 @@ function rm_panadol() {
         total -= 1;
         nPandol -= 1
         document.getElementById("panadol_num").innerHTML = nPandol
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -54,7 +53,7 @@ function ventolin() {
     total += 1.5;
     nVento += 1;
     document.getElementById("ventolin_num").innerHTML = nVento;
-
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_ventolin() {
@@ -62,6 +61,7 @@ function rm_ventolin() {
         total -= 1.5;
         nVento -= 1;
         document.getElementById("ventolin_num").innerHTML = nVento;
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -71,6 +71,7 @@ function biotic() {
     total += 3;
     nbiotic += 1;
     document.getElementById("anitbio_num").innerHTML = nbiotic;
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_biotic() {
@@ -78,6 +79,7 @@ function rm_biotic() {
         total -= 3;
         nbiotic -= 1
         document.getElementById("anitbio_num").innerHTML = nbiotic;
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -87,6 +89,7 @@ function vaporub() {
     total += 0.5;
     nVapo += 1;
     document.getElementById("vaporub_num").innerHTML = nVapo;
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_vaporub() {
@@ -94,6 +97,7 @@ function rm_vaporub() {
         total -= 0.5;
         nVapo -= 1;
         document.getElementById("vaporub_num").innerHTML = nVapo;
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -103,6 +107,7 @@ function bandaid() {
     total += 0.8;
     nBand += 1;
     document.getElementById("bandaid_num").innerHTML = nBand;
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_bandaid() {
@@ -110,6 +115,7 @@ function rm_bandaid() {
         total -= 0.8;
         nBand -= 1;
         document.getElementById("bandaid_num").innerHTML = nBand;
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -119,6 +125,7 @@ function streplis() {
     total += 2;
     nStrep += 1;
     document.getElementById("strepsils_num").innerHTML = nStrep;
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_streplis() {
@@ -126,6 +133,7 @@ function rm_streplis() {
         total -= 2;
         nStrep -= 1
         document.getElementById("strepsils_num").innerHTML = nStrep;
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
@@ -134,6 +142,7 @@ function knee() {
     total += 1.8;
     nElastic += 1
     document.getElementById("elastic_num").innerHTML = nElastic
+    document.getElementById("total").innerHTML = total + "  OMR";
 }
 
 function rm_knee() {
@@ -141,22 +150,26 @@ function rm_knee() {
         total -= 1.8;
         nElastic -= 1
         document.getElementById("elastic_num").innerHTML = nElastic
+        document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
 
 // discount
 function discount() {
     var dis = document.getElementById("discount_code").value;
-    if (dis == "15OF") {
+    if(dis == "10OF"){
         var discounted = total * 0.15;
         total *= 0.85;
         document.getElementById("disc-msg").innerHTML = "congrats, U got a 15% discount"
         document.getElementById("discount_charge").innerHTML = discounted;
-    } else {
-        document.getElementById("disc-msg").innerHTML = "Invalid discount code";
-        alert("Invalid discount code")
+        document.getElementById("total").innerHTML = total + "  OMR";
+       document.getElementById("discount_code").setAttribute('readonly', 'readonly')
+       discount = sudo;
     }
-
+    else{
+        document.getElementById("disc-msg").innerHTML = "Invalid discount code";
+    }
+   
     // if ($("discount_code").value != "" && $("#discount_code1").val() == "10OF") {
     //     var discount_per = 15;
     //     var discount_amount = parseInt((total * discount_per) / 100);
@@ -170,5 +183,11 @@ function discount() {
     //     error_trw.html("Invalid Discount Code!");
     //     alert("wrong discount code")
     // }
+    
+}
+function sudo(){
 
+}
+function back(){
+    sudo = discount;
 }
