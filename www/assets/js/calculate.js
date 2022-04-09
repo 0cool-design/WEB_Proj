@@ -191,7 +191,7 @@ var products = [pAdol,pPanadol,pVentolin,pAntiBiotic,pVaporub,pBandaid,pStrepsli
 function loadProducts(){
     // get table document object
     var t1 = document.getElementById("productsTable");
-
+    
     // get number of rows that already exist and delete them
     var pRows = t1.rows.length;
     for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
@@ -202,13 +202,17 @@ function loadProducts(){
         var tr = t1.insertRow(i);
 
         var cell = tr.insertCell(0);
-        cell.innerHTML = "<img src="+products[i].pic+" alt='dsdsd'>";
-       
+        cell.innerHTML = "<img src="+products[i].pic+" alt='dsdsd' height='200px'>";
+        
 
         var cell = tr.insertCell(1);
-        cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd'>";
+        cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd' height='200px'>";
+        
+        
         var cell = tr.insertCell(2);
-        cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd'>";
+        cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd' height='200px'>";
+        
+       
         var cell = tr.insertCell(3);
-        cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd'>";    }
-}
+        cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd' height='200px'>";    }
+}       
