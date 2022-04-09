@@ -12,6 +12,7 @@ let nElastic = 0;
 
 function getTotal() {
     document.getElementById("total").innerHTML = total + "  OMR";
+    
 }
 
 //get total for adol
@@ -145,16 +146,29 @@ function rm_knee() {
 
 // discount
 function discount() {
-    if ($("discount_code").value != "" && $("#discount_code1").val() == "10OF") {
-        var discount_per = 15;
-        var discount_amount = parseInt((total * discount_per) / 100);
-        discount_amount = total - discount_amount;
-
-    } else {
-        $("#discount-html").css("display", "none !important");
-        $("#total_cart_amt").html(total + ".00");
-        $("#discount_charge").html("00.00")
-        error_trw.html("Invalid Discount Code!");
+    var dis = document.getElementById("discount_code").value;
+    if(dis == "10OF"){
+        var discounted = total * 0.15;
+        total *= 0.85;
+        document.getElementById("disc-msg").innerHTML = "congrats, U got a 15% discount"
+        document.getElementById("discount_charge").innerHTML = discounted;
     }
+    else{
+        document.getElementById("disc-msg").innerHTML = "Invalid discount code";
+    }
+
+    // if ($("discount_code").value != "" && $("#discount_code1").val() == "10OF") {
+    //     var discount_per = 15;
+    //     var discount_amount = parseInt((total * discount_per) / 100);
+    //     discount_amount = total - discount_amount;
+    //     alert("great u got a discount")
+
+    // } else {
+    //     $("#discount-html").css("display", "none !important");
+    //     $("#total_cart_amt").html(total + ".00");
+    //     $("#discount_charge").html("00.00")
+    //     error_trw.html("Invalid Discount Code!");
+    //     alert("wrong discount code")
+    // }
 
 }

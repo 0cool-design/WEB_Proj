@@ -147,9 +147,9 @@
             <h2 style="font-weight: bold;">CheckOut</h2><br>
             <div class="mt-3">
                 <input type="text" name="" id="discount_code" class="form-control font-weight-bold" placeholder="Enter the discount code">
-
+                <span id="disc-msg"></span>
             </div>
-            <button style="margin-bottom: 20px;" id="getTotal" type="button" class="btn btn-outline-success" onclick="getTotal()">Get Total</button>
+            <button style="margin-bottom: 20px;" id="getTotal" type="button" class="btn btn-outline-success" onclick="getTotal(),discount()">Get Total</button>
             <h4>Total = <span id="total"></span></h4>
             <div class="price_indiv d-flex justify-content-between" id="discount-html">
                 <p>Discount</p>
