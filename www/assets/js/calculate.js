@@ -147,7 +147,7 @@ function rm_knee() {
 // discount
 function discount() {
     var dis = document.getElementById("discount_code").value;
-    if (dis == "10OF") {
+    if (dis == "15OF") {
         var discounted = total * 0.15;
         total *= 0.85;
         document.getElementById("disc-msg").innerHTML = "congrats, U got a 15% discount"
