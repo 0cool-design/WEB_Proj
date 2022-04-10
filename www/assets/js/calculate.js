@@ -70,7 +70,7 @@ function rm_ventolin() {
 function biotic() {
     total += 3;
     nbiotic += 1;
-    document.getElementById("anitbio_num").innerHTML = nbiotic;
+    document.getElementById("biotic_num").innerHTML = nbiotic;
     document.getElementById("total").innerHTML = total + "  OMR";
 }
 
@@ -78,7 +78,7 @@ function rm_biotic() {
     if (nbiotic > 0) {
         total -= 3;
         nbiotic -= 1
-        document.getElementById("anitbio_num").innerHTML = nbiotic;
+        document.getElementById("biotic_num").innerHTML = nbiotic;
         document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
@@ -122,7 +122,7 @@ function rm_bandaid() {
 
 // get total for streplis
 function streplis() {
-    total += 2;
+    total += 1;
     nStrep += 1;
     document.getElementById("strepsils_num").innerHTML = nStrep;
     document.getElementById("total").innerHTML = total + "  OMR";
@@ -130,7 +130,7 @@ function streplis() {
 
 function rm_streplis() {
     if (nStrep > 0) {
-        total -= 2;
+        total -= 1;
         nStrep -= 1
         document.getElementById("strepsils_num").innerHTML = nStrep;
         document.getElementById("total").innerHTML = total + "  OMR";
@@ -141,7 +141,7 @@ function rm_streplis() {
 function knee() {
     total += 1.8;
     nElastic += 1
-    document.getElementById("elastic_num").innerHTML = nElastic
+    document.getElementById("knee_num").innerHTML = nElastic
     document.getElementById("total").innerHTML = total + "  OMR";
 }
 
@@ -149,7 +149,7 @@ function rm_knee() {
     if (nElastic > 0) {
         total -= 1.8;
         nElastic -= 1
-        document.getElementById("elastic_num").innerHTML = nElastic
+        document.getElementById("knee_num").innerHTML = nElastic
         document.getElementById("total").innerHTML = total + "  OMR";
     }
 }
@@ -177,15 +177,14 @@ function sudo() {
 function back() {
     sudo = discountpic}
 //products XHTML table functions
-var pAdol = {name:"adol",pic:"assets/imgs/adol2.png",price:"2"};
-var  pPanadol= {name:"panadol",pic:"assets/imgs/panadol.avif",price:"1"};
-var pVentolin = {name:"ventolin",pic:"assets/imgs/ventolin.png",price:"1.5"};
-var pAntiBiotic = {name:"antiBiotic",pic:"assets/imgs/anitbiotics.png",price:"3"};
-var pVaporub = {name:"vaporub",pic:"assets/imgs/vaporub.png",price:"0.5"};
-var pBandaid = {name:"bandaid",pic:"assets/imgs/bandaid.png",price:"0.8"};
-var pStrepslis = {name:"strepslis",pic:"assets/imgs/strepsils.png",price:"1"};
-var pElastic = {name:"elastic",pic:"assets/imgs/elasticknee.png",price:"1.8"};
-
+var pAdol = {name:"adol",pic:"assets/imgs/adol2.png",price:"2",add:"adol",del:"rm_adol()",id:"adol_btn",spn:"adol_num"};
+var  pPanadol= {name:"panadol",pic:"assets/imgs/panadol.avif",price:"1",add:"panadol",del:"rm_panadol()",id:"panadol_btn"};
+var pVentolin = {name:"ventolin",pic:"assets/imgs/ventolin.png",price:"1.5",add:"ventolin",del:"rm_ventolin()",id:"ventolin_btn"};
+var pAntiBiotic = {name:"antiBiotic",pic:"assets/imgs/anitbiotics.png",price:"3",add:"biotic",del:"rm_biotic()",id:"anitbio_btn"};
+var pVaporub = {name:"vaporub",pic:"assets/imgs/vaporub.png",price:"0.5",add:"vaporub",del:"rm_vaporub()",id:"vaporub_btn"};
+var pBandaid = {name:"bandaid",pic:"assets/imgs/bandaid.png",price:"0.8",add:"bandaid",del:"rm_bandaid()",id:"bandaid_btn"}
+var pStrepslis = {name:"strepslis",pic:"assets/imgs/strepsils.png",price:"1",add:"streplis",del:"rm_streplis()",id:"strepsils_btn"};
+var pElastic = {name:"elastic",pic:"assets/imgs/elasticknee.png",price:"1.8",add:"knee",del:"rm_knee()",id:"elastic_btn"};
 var products = [pAdol,pPanadol,pVentolin,pAntiBiotic,pVaporub,pBandaid,pStrepslis,pElastic];
 
 function loadProducts(){
@@ -200,19 +199,53 @@ function loadProducts(){
     // populate table with data
     for (var i = 0; i < numRows; i++) {
         var tr = t1.insertRow(i);
+      //  tr.style.margin = "0px 20px 0px 586px";
+        for (var j =0; j<4;j++){
+        if(i == 0){
+        var cell = tr.insertCell(j);
+        cell.innerHTML = "<img src="+products[j].pic+" alt='dsdsd' height='200px'>";
+        cell.style.padding = "15px 60px 0px 0px";
+        cell.innerHTML += "<button id="+products[j].id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+products[j].add.concat("()")+">Add to cart <br> "+products[j].price+" OMR</button>";
+        cell.innerHTML += "<button id="+products[j].id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+products[j].del+">X</button>";
+        cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+products[j].add.concat("_num")+">0</span>"
+        }
+        else if (i ==1) {
+        var cell = tr.insertCell(j);
+        cell.innerHTML = "<img src="+products[j+4].pic+" alt='dsdsd' height='200px'>";
+        cell.style.padding = "15px 60px 0px 0px";
+        cell.innerHTML += "<button id="+products[j+4].id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+products[j+4].add.concat("()")+">Add to cart <br> "+products[j+4].price+" OMR</button>";
+        cell.innerHTML += "<button id="+products[j+4].id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+products[j+4].del+">X</button>";
+        cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+products[j+4].add.concat("_num")+">0</span>"
+            
+        } 
+        }
 
-        var cell = tr.insertCell(0);
-        cell.innerHTML = "<img src="+products[i].pic+" alt='dsdsd' height='200px'>";
-        
 
-        var cell = tr.insertCell(1);
-        cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd' height='200px'>";
+
+
+        // var cell = tr.insertCell(1);
+        // cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd' height='200px'>";
+        // cell.style.padding = "15px 60px 0px 15px";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+1].price+" OMR</button>";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
+        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
+
         
-        
-        var cell = tr.insertCell(2);
-        cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd' height='200px'>";
-        
+        // var cell = tr.insertCell(2);
+        // cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd' height='200px'>";
+        // cell.style.padding = "15px 0px 0px 40px";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+2].price+" OMR</button>";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
+        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
+
        
-        var cell = tr.insertCell(3);
-        cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd' height='200px'>";    }
+        // var cell = tr.insertCell(3);
+        // cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd' height='200px'>";  
+        // cell.style.padding = "15px 0px 0px 0px";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+3].price+" OMR</button>";
+        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
+        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
+
+    
+    }
 }       
