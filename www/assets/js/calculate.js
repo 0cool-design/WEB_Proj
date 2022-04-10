@@ -7,150 +7,143 @@ let nVapo = 0;
 let nBand = 0;
 let nStrep = 0;
 let nElastic = 0;
+let discounted =1;
+function getTotal(){
 
-
+    total = (nAdol*2)+(nPandol*1)+(nVento*1.5)+(nbiotic*3)+(nVapo*0.5)+(nBand*0.8)+(nStrep*1)+(nElastic*1.8);
+    total*=discounted;
+    document.getElementById("total").innerHTML = total + "  OMR";
+    return total
+}
 
 
 
 //get total for adol
 function adol() {
-    total += 2;
     nAdol += 1
     document.getElementById("adol_num").innerHTML = nAdol
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_adol() {
     if (nAdol > 0) {
-        total -= 2;
         nAdol -= 1
         document.getElementById("adol_num").innerHTML = nAdol
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 // ge total for panadol
 function panadol() {
-    total += 1;
     nPandol += 1
     document.getElementById("panadol_num").innerHTML = nPandol
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_panadol() {
     if (nPandol > 0) {
-        total -= 1;
         nPandol -= 1
         document.getElementById("panadol_num").innerHTML = nPandol
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 //get total for ventolin
 function ventolin() {
-    total += 1.5;
     nVento += 1;
     document.getElementById("ventolin_num").innerHTML = nVento;
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_ventolin() {
     if (nVento > 0) {
-        total -= 1.5;
         nVento -= 1;
         document.getElementById("ventolin_num").innerHTML = nVento;
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 // get total for antiBiotics
 function biotic() {
-    total += 3;
     nbiotic += 1;
     document.getElementById("biotic_num").innerHTML = nbiotic;
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_biotic() {
     if (nbiotic > 0) {
-        total -= 3;
+        
         nbiotic -= 1
         document.getElementById("biotic_num").innerHTML = nbiotic;
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 // get total  for vaporub
 function vaporub() {
-    total += 0.5;
     nVapo += 1;
     document.getElementById("vaporub_num").innerHTML = nVapo;
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_vaporub() {
     if (nVapo > 0) {
-        total -= 0.5;
+        
         nVapo -= 1;
         document.getElementById("vaporub_num").innerHTML = nVapo;
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 // get total for bandaid
 function bandaid() {
-    total += 0.8;
+   
     nBand += 1;
     document.getElementById("bandaid_num").innerHTML = nBand;
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_bandaid() {
-    if (nBand > 0) {
-        total -= 0.8;
+    if (nBand > 0) {  
         nBand -= 1;
         document.getElementById("bandaid_num").innerHTML = nBand;
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 
 // get total for streplis
 function streplis() {
-    total += 1;
     nStrep += 1;
     document.getElementById("strepsils_num").innerHTML = nStrep;
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_streplis() {
     if (nStrep > 0) {
-        total -= 1;
         nStrep -= 1
         document.getElementById("strepsils_num").innerHTML = nStrep;
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
 // get total for knee
 function knee() {
-    total += 1.8;
     nElastic += 1
     document.getElementById("knee_num").innerHTML = nElastic
-    document.getElementById("total").innerHTML = total + "  OMR";
+    getTotal();
 }
 
 function rm_knee() {
     if (nElastic > 0) {
-        total -= 1.8;
         nElastic -= 1
         document.getElementById("knee_num").innerHTML = nElastic
-        document.getElementById("total").innerHTML = total + "  OMR";
+        getTotal();
     }
 }
 
@@ -158,12 +151,12 @@ function rm_knee() {
 function discount() {
     var dis = document.getElementById("discount_code").value;
     if (dis == "15OF") {
-        var discounted = total * 0.15;
-        total *= 0.85;
+        discounted = 0.85;
         document.getElementById("disc-msg").innerHTML = "congrats, U got a 15% discount"
         document.getElementById("discount_charge").innerHTML = discounted;
         document.getElementById("total").innerHTML = total + "  OMR";
         document.getElementById("discount_code").setAttribute('readonly', 'readonly')
+        getTotal();
         discount = sudo;
     } else {
         document.getElementById("disc-msg").innerHTML = "Invalid discount code";
@@ -176,6 +169,9 @@ function sudo() {
 
 function back() {
     sudo = discountpic}
+
+
+
 //products XHTML table functions
 var pAdol = {name:"adol",pic:"assets/imgs/adol2.png",price:"2",add:"adol",del:"rm_adol()",id:"adol_btn",spn:"adol_num"};
 var  pPanadol= {name:"panadol",pic:"assets/imgs/panadol.avif",price:"1",add:"panadol",del:"rm_panadol()",id:"panadol_btn"};
