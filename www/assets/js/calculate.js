@@ -120,14 +120,14 @@ function rm_bandaid() {
 // get total for streplis
 function streplis() {
     nStrep += 1;
-    document.getElementById("strepsils_num").innerHTML = nStrep;
+    document.getElementById("streplis_num").innerHTML = nStrep;
     getTotal();
 }
 
 function rm_streplis() {
     if (nStrep > 0) {
         nStrep -= 1
-        document.getElementById("strepsils_num").innerHTML = nStrep;
+        document.getElementById("streplis_num").innerHTML = nStrep;
         getTotal();
     }
 }
