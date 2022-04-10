@@ -147,6 +147,11 @@ function rm_knee() {
     }
 }
 
+
+
+
+
+
 // discount
 function discount() {
     var dis = document.getElementById("discount_code").value;
@@ -183,13 +188,15 @@ var pStrepslis = {name:"strepslis",pic:"assets/imgs/strepsils.png",price:"1",add
 var pElastic = {name:"elastic",pic:"assets/imgs/elasticknee.png",price:"1.8",add:"knee",del:"rm_knee()",id:"elastic_btn"};
 var products = [pAdol,pPanadol,pVentolin,pAntiBiotic,pVaporub,pBandaid,pStrepslis,pElastic];
 
+
+
+
 function loadProducts(){
     // get table document object
     var t1 = document.getElementById("productsTable");
-    
     // get number of rows that already exist and delete them
     var pRows = t1.rows.length;
-    for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
+   // for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
     //get num of rows
     var numRows = products.length/4;
     // populate table with data
@@ -216,32 +223,24 @@ function loadProducts(){
         } 
         }
 
-
-
-
-        // var cell = tr.insertCell(1);
-        // cell.innerHTML = "<img src="+products[i+1].pic+" alt='dsdsd' height='200px'>";
-        // cell.style.padding = "15px 60px 0px 15px";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+1].price+" OMR</button>";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
-        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
-
-        
-        // var cell = tr.insertCell(2);
-        // cell.innerHTML = "<img src="+products[i+2].pic+" alt='dsdsd' height='200px'>";
-        // cell.style.padding = "15px 0px 0px 40px";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+2].price+" OMR</button>";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
-        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
-
-       
-        // var cell = tr.insertCell(3);
-        // cell.innerHTML = "<img src="+products[i+3].pic+" alt='dsdsd' height='200px'>";  
-        // cell.style.padding = "15px 0px 0px 0px";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick='adol()'>Add to cart <br> "+products[i+3].price+" OMR</button>";
-        // cell.innerHTML += "<button id='adol_btn' style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick='rm_adol()'>X</button>";
-        // cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id='adol_num'>0</span>"
-
     
     }
-}       
+}
+var ncell =0;
+function addProduct(){
+    newName= document.getElementById("name").value;
+    newPrice= document.getElementById("price").value;
+    var newProduct = {name:newName,pic:"assets/imgs/NewItem.png",price:newPrice,add:"",del:"",id:"new_item",spn:""};
+    // get table document object
+    var t1 = document.getElementById("productsTable");
+    var pRows = t1.rows.length;
+    var tr = t1.insertRow(pRows);
+    
+    var cell = tr.insertCell(ncell);
+    cell.innerHTML = "<img src="+newProduct.pic+" alt='dsdsd' height='200px'>";
+    cell.style.padding = "15px 60px 0px 0px";
+    cell.innerHTML += "<button id="+newProduct.id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+newProduct.add.concat("()")+">Add to cart <br> "+newProduct.price+" OMR</button>";
+    cell.innerHTML += "<button id="+newProduct.id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+newProduct.del+">X</button>";
+    cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+newProduct.add.concat("_num")+">0</span>"
+    ncell+=1;
+}
