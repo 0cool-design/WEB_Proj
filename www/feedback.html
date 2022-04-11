@@ -16,73 +16,72 @@
             src: url(assets/fonts/rog.ttf);
             font-family: rog;
         }
-
+        
         .table-hover {
             margin-top: 60px;
             font-size: 20px;
             width: 95%;
             margin-left: 30px;
         }
-
+        
         .button {
             margin-left: 30px;
             height: 50px;
         }
-
+        
         .button1 {
             margin-left: 60px;
         }
-
+        
         .button4 {
             margin-left: 50px;
         }
-
+        
         .btn-outline {
             border-radius: 20px;
             margin-left: 30px;
         }
     </style>
-
     <script type="text/javascript">
-      function validateForm() {
-        // get value of "fullName" from the "surveyForm" and store it as x
-        let x = document.forms["surveyForm"]["fullName"].value;
-        // get value of "feedbackMessage" from the "surveyForm" and store it as y
-        let y = document.forms["surveyForm"]["feedbackMessage"].value;
-        // store all radio button survey questions as individual varialbes
-        var radio1 = document.getElementsByName("surveyQuestion1");
-        var radio2 = document.getElementsByName("surveyQuestion2");
-        var radio3 = document.getElementsByName("surveyQuestion3");
-        // set form validity boolean as false to start with
-        var formValid = false;
+        function validateForm() {
+            // get value of "fullName" from the "surveyForm" and store it as x
+            let x = document.forms["surveyForm"]["fullName"].value;
+            // get value of "feedbackMessage" from the "surveyForm" and store it as y
+            let y = document.forms["surveyForm"]["feedbackMessage"].value;
+            // store all radio button survey questions as individual varialbes
+            var radio1 = document.getElementsByName("surveyQuestion1");
+            var radio2 = document.getElementsByName("surveyQuestion2");
+            var radio3 = document.getElementsByName("surveyQuestion3");
+            // set form validity boolean as false to start with
+            var formValid = false;
 
-        // if the length of "y" which is the value of the input text area is less than 10, alert browser with a message
-        if (y.length < 10) {
-          alert("Feedback message should be more than 10 characters");
-          return formValid;
+            // if the length of "y" which is the value of the input text area is less than 10, alert browser with a message
+            if (y.length < 10) {
+                alert("Feedback message should be more than 10 characters");
+                return formValid;
+            }
+
+            // if "x" which is the value of input of text box full name is empty, alert browser with a message
+            if (x == "") {
+                alert("'Full Name' must be filled out");
+                return formValid;
+            }
+
+            // set incrament value "i"
+            var i = 0;
+            // keep looping through the radio buttons
+            while (!formValid && i < radio1.length) {
+                // and check if all 3 radio buttons, 1 and 2 and 3 are checked... the form validity boolean set to true
+                if (radio1[i].checked && radio2[i].checked && radio3[i].checked)
+                    formValid = true;
+                i++;
+            }
+
+            // if still invalid alert browser with a message
+            if (!formValid)
+                alert("Please choose one of the options to rate your satisfaction");
+            return formValid;
         }
-
-        // if "x" which is the value of input of text box full name is empty, alert browser with a message
-        if (x == "") {
-          alert("'Full Name' must be filled out");
-          return formValid;
-        }
-
-        // set incrament value "i"
-        var i = 0;
-        // keep looping through the radio buttons
-        while (!formValid && i < radio1.length) {
-          // and check if all 3 radio buttons, 1 and 2 and 3 are checked... the form validity boolean set to true
-          if (radio1[i].checked && radio2[i].checked && radio3[i].checked)
-            formValid = true;
-            i++;
-        }
-
-        // if still invalid alert browser with a message
-        if (!formValid)
-        alert("Please choose one of the options to rate your satisfaction");
-        return formValid;
-      }
     </script>
 </head>
 
@@ -247,7 +246,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-
                             <label for="feedbackMessage" style="margin: 40px 0 10px 32px; font-size: 23px; font-weight: bold">Please provide us with your feedback of our website using the text area below:</label>
                             <p style="margin: 0 0 0 32px">(Should be more than 10 characters)</p>
                             <br>
