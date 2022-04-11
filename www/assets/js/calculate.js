@@ -269,7 +269,7 @@ function searchFunction() {
             }
         }
     }
-    if (flag == 0) {
-        alert("No patient found");
-    }
+    // if (flag == 0) {
+    //     alert("Product Not Found");
+    // }
 }
