@@ -68,73 +68,22 @@ function addPatient() {
     patients();
 }
 
-function searchFunction() {
+
+function searchF() {
     // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchIn");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("appont-table");
-    tr = table.getElementsByTagName("tr");
-    var flag = 1;
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        console.log(td);
-        //     if (td) {
-        //         txtValue = td.textContent || td.innerText;
-        //         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        //             tr[i].style.display = "";
-        //             flag = 1;
-        //         } else {
-        //             tr[i].style.display = "none";
-        //             flag = 0;
-        //         }
-        //     }
-        // }
-        // if (flag == 0) {
-        //     alert("No patient found");
+    var input, filter, i, flag;
+    input = document.getElementById("searchIn").value;
+    filter = input.toUpperCase();
+    // loop trough patients array
+
+    for (var i = 0; i < patientsList.length; i++) {
+        var name = patientsList[i].name.toUpperCase();
+        if (name === filter) {
+            alert(" found!");
+            flag = true;
+        }
+    }
+    if (!flag) {
+        alert("Patient Not Found!");
     }
 }
-
-// function newApp() {
-//     // get table document object
-//     var t1 = document.getElementById("appont-table");
-
-//     //get existing patietns list
-//     var patients = [mazin, abdulaziz, Hamood, mohammed];
-//     pName = document.getElementById("name").value;
-//     pNumber = document.getElementById("email").value;
-//     pEmail = document.getElementById("phone").value;
-//     pDate = document.getElementById("date").value;
-//     var newPatient = {
-//         name: pName,
-//         phone: pNumber,
-//         Email: pEmail,
-//         Date: pDate
-//     }
-//     patients.unshift(newPatient);
-
-
-//     // get number of rows that already exist
-//     var n = t1.rows.length;
-//     // insert new row 
-//     var tr = t1.insertRow(n);
-
-//     var cell = tr.insertCell(0);
-//     cell.innerText = newPatient.name;
-
-
-//     var cell = tr.insertCell(1);
-//     cell.innerText = newPatient.Email;
-
-
-//     var cell = tr.insertCell(2);
-//     cell.innerText = newPatient.phone;
-
-//     var cell = tr.insertCell(3);
-//     cell.innerText = newPatient.Date;
-
-
-
-
-// }

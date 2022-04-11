@@ -196,15 +196,12 @@ var products = [pAdol, pPanadol, pVentolin, pAntiBiotic, pVaporub, pBandaid, pSt
 function loadProducts() {
     // get table document object
     var t1 = document.getElementById("productsTable");
-    // get number of rows that already exist and delete them
-    var pRows = t1.rows.length;
     // for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
     //get num of rows
     var numRows = products.length / 4;
     // populate table with data
     for (var i = 0; i < numRows; i++) {
         var tr = t1.insertRow(i);
-        //  tr.style.margin = "0px 20px 0px 586px";
         for (var j = 0; j < 4; j++) {
             if (i == 0) {
                 var cell = tr.insertCell(j);
@@ -248,10 +245,21 @@ function addProduct() {
 }
 
 
-function searchFunction() {
-    // get user input and check if in array of products
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
-    filter = input.value.toUpperCase();
+function searchpd() {
+    // Declare variables
+    var input, filter, i, flag;
+    input = document.getElementById("searchPd").value;
+    filter = input.toUpperCase();
+    // loop trough products array
 
+    for (var i = 0; i < products.length; i++) {
+        var name = products[i].name.toUpperCase();
+        if (name === filter) {
+            alert(" found!");
+            flag = true;
+        }
+    }
+    if (!flag) {
+        alert("No product found!");
+    }
 }
