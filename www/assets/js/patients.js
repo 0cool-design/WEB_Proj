@@ -84,7 +84,9 @@ function searchFunction() {
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
-                tr[i].style.display = "none";
+                //tr[i].style.display = "none";
+                alert("Not found")
+                break
             }
         }
     }
