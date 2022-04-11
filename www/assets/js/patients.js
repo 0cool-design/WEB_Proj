@@ -75,7 +75,7 @@ function searchFunction() {
     filter = input.value.toUpperCase();
     table = document.getElementById("appont-table");
     tr = table.getElementsByTagName("tr");
-
+    var flag = 1;
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[0];
@@ -83,12 +83,15 @@ function searchFunction() {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
+                flag = 1;
             } else {
-                //tr[i].style.display = "none";
-                alert("Not found")
-                break
+                tr[i].style.display = "none";
+                flag = 0;
             }
         }
+    }
+    if (flag == 0) {
+        alert("No patient found");
     }
 }
 
