@@ -7,11 +7,12 @@ let nVapo = 0;
 let nBand = 0;
 let nStrep = 0;
 let nElastic = 0;
-let discounted =1;
-function getTotal(){
+let discounted = 1;
 
-    total = (nAdol*2)+(nPandol*1)+(nVento*1.5)+(nbiotic*3)+(nVapo*0.5)+(nBand*0.8)+(nStrep*1)+(nElastic*1.8);
-    total*=discounted;
+function getTotal() {
+
+    total = (nAdol * 2) + (nPandol * 1) + (nVento * 1.5) + (nbiotic * 3) + (nVapo * 0.5) + (nBand * 0.8) + (nStrep * 1) + (nElastic * 1.8);
+    total *= discounted;
     document.getElementById("total").innerHTML = total + "  OMR";
     return total
 }
@@ -75,7 +76,7 @@ function biotic() {
 
 function rm_biotic() {
     if (nbiotic > 0) {
-        
+
         nbiotic -= 1
         document.getElementById("biotic_num").innerHTML = nbiotic;
         getTotal();
@@ -92,7 +93,7 @@ function vaporub() {
 
 function rm_vaporub() {
     if (nVapo > 0) {
-        
+
         nVapo -= 1;
         document.getElementById("vaporub_num").innerHTML = nVapo;
         getTotal();
@@ -102,14 +103,14 @@ function rm_vaporub() {
 
 // get total for bandaid
 function bandaid() {
-   
+
     nBand += 1;
     document.getElementById("bandaid_num").innerHTML = nBand;
     getTotal();
 }
 
 function rm_bandaid() {
-    if (nBand > 0) {  
+    if (nBand > 0) {
         nBand -= 1;
         document.getElementById("bandaid_num").innerHTML = nBand;
         getTotal();
@@ -173,74 +174,102 @@ function sudo() {
 }
 
 function back() {
-    sudo = discountpic}
+    sudo = discountpic
+}
 
 
 
 //products XHTML table functions
-var pAdol = {name:"adol",pic:"assets/imgs/adol2.png",price:"2",add:"adol",del:"rm_adol()",id:"adol_btn",spn:"adol_num"};
-var  pPanadol= {name:"panadol",pic:"assets/imgs/panadol.avif",price:"1",add:"panadol",del:"rm_panadol()",id:"panadol_btn"};
-var pVentolin = {name:"ventolin",pic:"assets/imgs/ventolin.png",price:"1.5",add:"ventolin",del:"rm_ventolin()",id:"ventolin_btn"};
-var pAntiBiotic = {name:"antiBiotic",pic:"assets/imgs/anitbiotics.png",price:"3",add:"biotic",del:"rm_biotic()",id:"anitbio_btn"};
-var pVaporub = {name:"vaporub",pic:"assets/imgs/vaporub.png",price:"0.5",add:"vaporub",del:"rm_vaporub()",id:"vaporub_btn"};
-var pBandaid = {name:"bandaid",pic:"assets/imgs/bandaid.png",price:"0.8",add:"bandaid",del:"rm_bandaid()",id:"bandaid_btn"}
-var pStrepslis = {name:"strepslis",pic:"assets/imgs/strepsils.png",price:"1",add:"streplis",del:"rm_streplis()",id:"strepsils_btn"};
-var pElastic = {name:"elastic",pic:"assets/imgs/elasticknee.png",price:"1.8",add:"knee",del:"rm_knee()",id:"elastic_btn"};
-var products = [pAdol,pPanadol,pVentolin,pAntiBiotic,pVaporub,pBandaid,pStrepslis,pElastic];
+var pAdol = { name: "adol", pic: "assets/imgs/adol2.png", price: "2", add: "adol", del: "rm_adol()", id: "adol_btn", spn: "adol_num" };
+var pPanadol = { name: "panadol", pic: "assets/imgs/panadol.avif", price: "1", add: "panadol", del: "rm_panadol()", id: "panadol_btn" };
+var pVentolin = { name: "ventolin", pic: "assets/imgs/ventolin.png", price: "1.5", add: "ventolin", del: "rm_ventolin()", id: "ventolin_btn" };
+var pAntiBiotic = { name: "antiBiotic", pic: "assets/imgs/anitbiotics.png", price: "3", add: "biotic", del: "rm_biotic()", id: "anitbio_btn" };
+var pVaporub = { name: "vaporub", pic: "assets/imgs/vaporub.png", price: "0.5", add: "vaporub", del: "rm_vaporub()", id: "vaporub_btn" };
+var pBandaid = { name: "bandaid", pic: "assets/imgs/bandaid.png", price: "0.8", add: "bandaid", del: "rm_bandaid()", id: "bandaid_btn" }
+var pStrepslis = { name: "strepslis", pic: "assets/imgs/strepsils.png", price: "1", add: "streplis", del: "rm_streplis()", id: "strepsils_btn" };
+var pElastic = { name: "elastic", pic: "assets/imgs/elasticknee.png", price: "1.8", add: "knee", del: "rm_knee()", id: "elastic_btn" };
+var products = [pAdol, pPanadol, pVentolin, pAntiBiotic, pVaporub, pBandaid, pStrepslis, pElastic];
 
 
 
 
-function loadProducts(){
+function loadProducts() {
     // get table document object
     var t1 = document.getElementById("productsTable");
     // get number of rows that already exist and delete them
     var pRows = t1.rows.length;
-   // for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
+    // for (var x = pRows - 1; x >= 0; x--) t1.deleteRow(x);
     //get num of rows
-    var numRows = products.length/4;
+    var numRows = products.length / 4;
     // populate table with data
     for (var i = 0; i < numRows; i++) {
         var tr = t1.insertRow(i);
-      //  tr.style.margin = "0px 20px 0px 586px";
-        for (var j =0; j<4;j++){
-        if(i == 0){
-        var cell = tr.insertCell(j);
-        cell.innerHTML = "<img src="+products[j].pic+" alt='dsdsd' height='200px'>";
-        cell.style.padding = "15px 60px 0px 0px";
-        cell.innerHTML += "<button id="+products[j].id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+products[j].add.concat("()")+">Add to cart <br> "+products[j].price+" OMR</button>";
-        cell.innerHTML += "<button id="+products[j].id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+products[j].del+">X</button>";
-        cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+products[j].add.concat("_num")+">0</span>"
-        }
-        else if (i ==1) {
-        var cell = tr.insertCell(j);
-        cell.innerHTML = "<img src="+products[j+4].pic+" alt='dsdsd' height='200px'>";
-        cell.style.padding = "15px 60px 0px 0px";
-        cell.innerHTML += "<button id="+products[j+4].id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+products[j+4].add.concat("()")+">Add to cart <br> "+products[j+4].price+" OMR</button>";
-        cell.innerHTML += "<button id="+products[j+4].id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+products[j+4].del+">X</button>";
-        cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+products[j+4].add.concat("_num")+">0</span>"
-            
-        } 
+        //  tr.style.margin = "0px 20px 0px 586px";
+        for (var j = 0; j < 4; j++) {
+            if (i == 0) {
+                var cell = tr.insertCell(j);
+                cell.innerHTML = "<img src=" + products[j].pic + " alt='dsdsd' height='200px'>";
+                cell.style.padding = "15px 60px 0px 0px";
+                cell.innerHTML += "<button id=" + products[j].id + " style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick=" + products[j].add.concat("()") + ">Add to cart <br> " + products[j].price + " OMR</button>";
+                cell.innerHTML += "<button id=" + products[j].id + " style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick=" + products[j].del + ">X</button>";
+                cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id=" + products[j].add.concat("_num") + ">0</span>"
+            } else if (i == 1) {
+                var cell = tr.insertCell(j);
+                cell.innerHTML = "<img src=" + products[j + 4].pic + " alt='dsdsd' height='200px'>";
+                cell.style.padding = "15px 60px 0px 0px";
+                cell.innerHTML += "<button id=" + products[j + 4].id + " style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick=" + products[j + 4].add.concat("()") + ">Add to cart <br> " + products[j + 4].price + " OMR</button>";
+                cell.innerHTML += "<button id=" + products[j + 4].id + " style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick=" + products[j + 4].del + ">X</button>";
+                cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id=" + products[j + 4].add.concat("_num") + ">0</span>"
+
+            }
         }
 
-    
+
     }
 }
-var ncell =0;
-function addProduct(){
-    newName= document.getElementById("name").value;
-    newPrice= document.getElementById("price").value;
-    var newProduct = {name:newName,pic:"assets/imgs/NewItem.png",price:newPrice,add:"",del:"",id:"new_item",spn:""};
+var ncell = 0;
+
+function addProduct() {
+    newName = document.getElementById("name").value;
+    newPrice = document.getElementById("price").value;
+    var newProduct = { name: newName, pic: "assets/imgs/NewItem.png", price: newPrice, add: "", del: "", id: "new_item", spn: "" };
     // get table document object
     var t1 = document.getElementById("productsTable");
     var pRows = t1.rows.length;
     var tr = t1.insertRow(pRows);
-    
+
     var cell = tr.insertCell(ncell);
-    cell.innerHTML = "<img src="+newProduct.pic+" alt='dsdsd' height='200px'>";
+    cell.innerHTML = "<img src=" + newProduct.pic + " alt='dsdsd' height='200px'>";
     cell.style.padding = "15px 60px 0px 0px";
-    cell.innerHTML += "<button id="+newProduct.id+" style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick="+newProduct.add.concat("()")+">Add to cart <br> "+newProduct.price+" OMR</button>";
-    cell.innerHTML += "<button id="+newProduct.id+" style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick="+newProduct.del+">X</button>";
-    cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id="+newProduct.add.concat("_num")+">0</span>"
-    ncell+=1;
+    cell.innerHTML += "<button id=" + newProduct.id + " style='margin: 10px 0px 2px 30px;' type='button' class='btn btn-outline-success' onclick=" + newProduct.add.concat("()") + ">Add to cart <br> " + newProduct.price + " OMR</button>";
+    cell.innerHTML += "<button id=" + newProduct.id + " style='margin: 10px 0px 2px 5px;' type='button' class='btn btn-outline-danger' onclick=" + newProduct.del + ">X</button>";
+    cell.innerHTML += "<span style='margin:85px 0px 0px 10px' id=" + newProduct.add.concat("_num") + ">0</span>"
+    ncell += 1;
+}
+
+function searchFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchPd");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("productsTable");
+    tr = table.getElementsByTagName("tr");
+    var flag = 1;
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+                flag = 1;
+            } else {
+                tr[i].style.display = "none";
+                flag = 0;
+            }
+        }
+    }
+    if (flag == 0) {
+        alert("No patient found");
+    }
 }

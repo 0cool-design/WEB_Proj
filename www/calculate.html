@@ -79,9 +79,11 @@
         <h1>Clinincom Store</h1><br><br>
         <h3>Medications section:</h3>
         <!-- <button onclick="loadProducts()">generate</button> -->
+        <input type="text" id="searchPd" placeholder="Search for Product..">
+        <button id="searchBTN" onclick="searchFunction()"><a><em class="fa fa-search"></em></a></button>
         <div>
-            <table class="table" id="productsTable" >
-               <!-- table content  -->
+            <table class="table" id="productsTable">
+                <!-- table content  -->
             </table>
             <hr>
             <!-- total section -->
@@ -90,7 +92,7 @@
                 <input type="text" name="" id="discount_code" class="form-control font-weight-bold" placeholder="Enter the discount code" onblur="discount()">
                 <span id="disc-msg"></span>
             </div>
-           
+
             <h4 style="margin-top: 20px;">Total = <span id="total"></span></h4>
             <div class="price_indiv d-flex justify-content-between" id="discount-html">
                 <p>Discount</p>
@@ -99,18 +101,18 @@
         </div>
         <hr>
         <h3 style="margin-top: 40px;">Add Product</h3>
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <input id="name" style="margin:10px" type="text" class="form-control" placeholder="Product Name">
-                    </div>
-                    <div class="col">
-                        <input id="price" style="margin:10px" type="number" class="form-control"  placeholder="Price">
-                    </div>
-
+        <form>
+            <div class="row">
+                <div class="col">
+                    <input id="name" style="margin:10px" type="text" class="form-control" placeholder="Product Name">
                 </div>
-                <button style="margin:10px" type="button" class="btn btn-info" onclick="addProduct()">Add Product</button>
-            </form>
+                <div class="col">
+                    <input id="price" style="margin:10px" type="number" class="form-control" placeholder="Price">
+                </div>
+
+            </div>
+            <button style="margin:10px" type="button" class="btn btn-info" onclick="addProduct()">Add Product</button>
+        </form>
     </section>
 </body>
 <footer>
