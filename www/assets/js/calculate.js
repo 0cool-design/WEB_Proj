@@ -247,29 +247,11 @@ function addProduct() {
     ncell += 1;
 }
 
+
 function searchFunction() {
-    // Declare variables
+    // get user input and check if in array of products
     var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchPd");
+    input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("productsTable");
-    tr = table.getElementsByTagName("tr");
-    var flag = 1;
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-            txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
-                flag = 1;
-            } else {
-                tr[i].style.display = "none";
-                flag = 0;
-            }
-        }
-    }
-    // if (flag == 0) {
-    //     alert("Product Not Found");
-    // }
+
 }
