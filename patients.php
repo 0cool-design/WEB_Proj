@@ -155,7 +155,7 @@
                      <th>Age</th>
                      </tr>   ";
                     //…else, the rest of code will go here (e.g., insert, update…
-                    $sql = "SELECT * FROM patients";
+                    $sql = "SELECT * FROM `patients`";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                        

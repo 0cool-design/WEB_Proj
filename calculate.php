@@ -140,7 +140,7 @@
                     <th>Quantity</th>
                      </tr>   ";
                     //…else, the rest of code will go here (e.g., insert, update…
-                    $sql = "SELECT * FROM products";
+                    $sql = "SELECT * FROM `products`";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) > 0) {
                        
