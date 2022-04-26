@@ -162,10 +162,11 @@
                         
                         // output data of each row
                         while($row = mysqli_fetch_assoc($result)) {
-                        echo "id: " . $row["pid"].
-                        " - Name: " . $row["name"].
-                        " - Email:" . $row["email"].
-                        "- age:". $row["age"]. "<br>";
+                        echo "<tr>
+                        <td>" . $row["pid"]."</td>".
+                        "<td>" . $row["name"]."</td>".
+                        "<td>" . $row["email"]."</td>".
+                        "<td>". $row["age"]."</td> </tr>";
                         }       
                         } else {
                         echo "No patients were found";
