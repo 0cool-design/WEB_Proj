@@ -15,7 +15,7 @@
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧  
 - [ ] [FAQ](https://github.com/0cool-design/WEB_Proj/blob/main/www/faq.html) 🚧
 - [ ] [Home](https://github.com/0cool-design/WEB_Proj/blob/main/www/index.html) 🚧  
-- [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.html) 🚧   
+- [ ] [Patients](https://github.com/0cool-design/WEB_Proj/blob/main/www/patients.php) 🚧   
 
    
  > Progress  
