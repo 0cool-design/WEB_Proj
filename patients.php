@@ -70,7 +70,7 @@
     <?php 
         $servername = "localhost";
         $username = "root";
-        $password = 'Bp$GeP9bK6gjh$Eh75cBy5Nc#';
+        $password = "";
         $dbname = "webproj";
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $dbname);
