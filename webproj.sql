@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2022 at 10:12 AM
+-- Generation Time: Apr 26, 2022 at 12:02 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -47,6 +47,32 @@ INSERT INTO `patients` (`pid`, `name`, `email`, `phone`, `age`) VALUES
 (1105, 'julanda', 'julanda@gmail.com', '98790344', 29),
 (1106, 'huda', 'huda@gmail.com', '99321434', 31),
 (1107, 'abir', 'abir@gmail.com', '99879545', 25);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` varchar(5) DEFAULT NULL,
+  `name` varchar(15) DEFAULT NULL,
+  `price` int(3) DEFAULT NULL,
+  `quantity` int(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `quantity`) VALUES
+('ad1', 'adol', 1, 10),
+('vn1', 'ventolin', 2, 8),
+('abtc3', 'antiBiotics', 3, 11),
+('pnd2', 'Panadol', 1, 20),
+('vpr', 'VapoRub', 1, 17),
+('bnd1', 'Bandaid', 2, 13),
+('strps', 'Strepsils', 1, 6);
 
 --
 -- Indexes for dumped tables
