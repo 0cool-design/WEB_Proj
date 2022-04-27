@@ -65,7 +65,6 @@
         });
     </script>
 </head>
-<!-- onload="patients(), readPatients()" -->
 <body >
     <?php 
         $servername = "localhost";
