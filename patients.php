@@ -136,7 +136,7 @@
          </header>
          <input type="text" id="searchIn" placeholder="Search for names..">
          <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
-         <form name="pform">
+         <form action="" name="pform" method="POST">
             <div class="row">
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
@@ -150,8 +150,8 @@
                </div>
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
-            <button style="margin:10px" type="submit" name="update" class="btn btn-info" >Update</button>
-            <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button>
+            <!-- <button style="margin:10px" type="submit" name="update" class="btn btn-info" >Update</button>
+            <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button> -->
          </form>
       </div>
       </div>
@@ -166,6 +166,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Age</th>
+            <th>Edit</th>
             </tr>   ";
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `patients`";
@@ -179,8 +180,12 @@
                "<td>" . $row["email"]."</td>".
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td> </tr>";
-               }       
-               } else {
+               echo "<td>"; ?> <button onclick="editF()" class="btn btn-info">Edit</button> <?php echo "</td>";
+               // echo "<td>"; ?> <button onclick="deleteF()" class="btn btn-danger">Delete</button> <?php echo "</td>";
+               }
+               echo "</table>";
+
+               }else {
                echo "No patients were found";
                }
                
@@ -190,38 +195,14 @@
       </table>
    </body>
    <?php
-        if(isset($_POST['insert'])){
-           $pid = $_POST['pid'];
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $age = $_POST['age'];
-            $sql = "INSERT INTO `patients` (`pid`, `name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')";
-            if (mysqli_query($conn, $sql)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
-        } else if(isset($_POST['update'])){
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $age = $_POST['age'];
-            $sql = "UPDATE `patients` SET `name`='$name',`email`='$email',`phone`='$phone',`age`='$age' WHERE `pid`='$pid'";
-            if (mysqli_query($conn, $sql)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
-        } else if(isset($_POST['delete'])){
-            $sql = "DELETE FROM `patients` WHERE `pid`=1";
-            if (mysqli_query($conn, $sql)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
-        }
-         mysqli_close($conn);
+   if (isset($_POST['insert'])) {
+      // $pid = $_POST['pid'];
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $age = $_POST['age'];
+      mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES (NULL,'$name', '$email', '$phone', '$age')");
+   }
         ?>
    <footer>
       <!-- Footer Starts Here -->
