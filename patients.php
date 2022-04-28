@@ -62,7 +62,7 @@
       </script>
    </head>
    <body >
-      <!-- <?php 
+      <?php 
          $servername = "localhost";
          $username = "root";
          $password = "";
@@ -73,8 +73,7 @@
          if (!$conn) {
          die("Connection failed: " . mysqli_connect_error());
          }
-         ?> -->
-         <?php include 'dp.php'; ?>
+         ?>
       <!-- Pre Header -->
       <div id="pre-header">
          <div class="container">
@@ -198,12 +197,12 @@
    </body>
    <?php
    if (isset($_POST['insert'])) {
-      // $pid = $_POST['pid'];
+      $pid = $_POST['pid'];
       $name = $_POST['name'];
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $age = $_POST['age'];
-      mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES (NULL,'$name', '$email', '$phone', '$age')");
+      mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')");
    }
         ?>
    <footer>
