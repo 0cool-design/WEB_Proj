@@ -145,16 +145,23 @@
                <div class="col">
                   <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
                   <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required>
-                  <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
                </div>
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
          </form>
       </div>
    </body>
-</html>
 <?php
-
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "webproj";
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+    
 ?>
    <footer>
       <!-- Footer Starts Here -->
