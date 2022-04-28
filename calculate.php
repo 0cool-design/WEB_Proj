@@ -15,7 +15,8 @@
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
-      <title>Patients</title>
+      <title>Products
+      </title>
       <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
       <link rel="stylesheet" href="assets/css/index.css">
       <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -134,24 +135,24 @@
                </div>
             </div>
          </header>
-         <input type="text" id="searchIn" placeholder="Search for names..">
-         <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
+        
+         
          <form action="" name="pform" method="POST">
+         <input type="text" id="searchIn" placeholder="Search for Products">
+         <button name="search" id="searchBTN"><a><em class="fa fa-search"></em></a></button>
             <div class="row">
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
-                  <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  <input id="quantity" name="quantity" style="margin:10px" type="number"  class="form-control"  placeholder="Quantity" required>
                </div>
                <div class="col">
-                  <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
-                  <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required>
-                  <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
-                  <!-- <input id="date" name=""style="margin:10px" type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" class="form-control" placeholder="Appointment Date" required> -->
+                  <input id="price" name="price" style="margin:10px" type="number"   class="form-control" placeholder="Price" required>
+                  <input id="id" name="id" style="margin:10px" type=""  class="form-control" placeholder="ID" required>
+   
                </div>
             </div>
-            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
-            <!-- <button style="margin:10px" type="submit" name="update" class="btn btn-info" >Update</button>
-            <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button> -->
+            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Product</button>
+           
          </form>
       </div>
       </div>
@@ -163,26 +164,23 @@
             <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Age</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Edit/Delete</th>
             </tr>   ";
             //…else, the rest of code will go here (e.g., insert, update…
-            $sql = "SELECT * FROM `patients`";
+            $sql = "SELECT * FROM `products`";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
                echo "<tr>
-               <td>" . $row["pid"]."</td>".
+               <td>" . $row["id"]."</td>".
                "<td>" . $row["name"]."</td>".
-               "<td>" . $row["email"]."</td>".
-               "<td>" . $row["phone"]."</td>".
-               "<td>". $row["age"]."</td>";
-               echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
-               echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+               "<td>" . $row["price"]."</td>".
+               "<td>" . $row["quantity"]."</td>";
+               echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> 
+               <a href="delete.php?id=<?php echo $row["id"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
@@ -197,14 +195,20 @@
    </body>
    <?php
    if (isset($_POST['insert'])) {
-      // $pid = $_POST['pid'];
+      $id = $_POST['id'];
       $name = $_POST['name'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $age = $_POST['age'];
-      mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES (NULL,'$name', '$email', '$phone', '$age')");
+      $price = $_POST['price'];
+      $quantity = $_POST['quantity'];
+      mysqli_query($conn, "INSERT INTO `products` (`id`,`name`, `price`, `quantity`) VALUES ('$id', '$name', '$price', '$quantity')");
+   }
+   if(isset($_POST['search'])){
+      $id = $_POST['id'];
+
+
    }
         ?>
+
+
    <footer>
       <!-- Footer Starts Here -->
       <div class="footer">
