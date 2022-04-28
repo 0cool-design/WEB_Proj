@@ -181,8 +181,8 @@
                "<td>" . $row["email"]."</td>".
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td>";
-               echo "<td>"; ?> <button onclick="editF()" class="btn btn-info">Edit</button> <?php echo "</td>";
-               echo "<td>"; ?> <button onclick="deleteF()" class="btn btn-danger">Delete</button> <?php echo "</td> </tr>";
+               echo "<td>"; ?> <button class="btn btn-info">Edit</button> <?php echo "</td>";
+               echo "<td>"; ?> <button class="btn btn-danger">Delete</button> <?php echo "</td> </tr>";
                }
                echo "</table>";
 
