@@ -146,12 +146,9 @@
                   <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
                   <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required>
                   <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
-                  <!-- <input id="date" name=""style="margin:10px" type="text" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" class="form-control" placeholder="Appointment Date" required> -->
                </div>
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
-            <!-- <button style="margin:10px" type="submit" name="update" class="btn btn-info" >Update</button>
-            <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button> -->
          </form>
       </div>
       </div>
@@ -181,8 +178,8 @@
                "<td>" . $row["email"]."</td>".
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td>";
-               echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
-               echo "<td>"; ?> <a href="delete.php?id=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+               echo "<td>"; ?> <a href="edit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
+               echo "<td>"; ?> <a href="delete.php?pid=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
