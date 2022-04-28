@@ -62,7 +62,7 @@
       </script>
    </head>
    <body >
-      <?php 
+      <!-- <?php 
          $servername = "localhost";
          $username = "root";
          $password = "";
@@ -73,7 +73,8 @@
          if (!$conn) {
          die("Connection failed: " . mysqli_connect_error());
          }
-         ?>
+         ?> -->
+         <?php include 'dp.php'; ?>
       <!-- Pre Header -->
       <div id="pre-header">
          <div class="container">
