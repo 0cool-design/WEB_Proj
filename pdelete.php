@@ -5,10 +5,10 @@
          $dbname = "webproj";
          // Create connection
          $conn = mysqli_connect($servername, $username, $password, $dbname);
-         $id = $_GET['pid'];
-            $sql = "DELETE FROM `products` WHERE `products`.`id` = $id";
+         $pid = $_GET['pid'];
+            $sql = "DELETE FROM `patients` WHERE `patients`.`pid` = $pid";
             $result = mysqli_query($conn, $sql); 
          ?>
             <script>
-                window.location.href = "products.php";
+                window.location.href = "patients.php";
             </script>

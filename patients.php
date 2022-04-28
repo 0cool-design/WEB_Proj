@@ -178,8 +178,8 @@
                "<td>" . $row["email"]."</td>".
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td>";
-               echo "<td>"; ?> <a href="edit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
-               echo "<td>"; ?> <a href="delete.php?pid=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
+               echo "<td>"; ?> <a href="pedit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
+               echo "<td>"; ?> <a href="pdelete.php?pid=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
