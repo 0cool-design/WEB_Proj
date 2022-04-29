@@ -45,21 +45,6 @@
          background-color: #dddddd;
          }
       </style>
-      <script src="assets/js/patients.js"></script>
-      <script>
-         var input = document.getElementById("searchIn");
-         
-         // Execute a function when the user releases a key on the keyboard
-         input.addEventListener("keyup", function(event) {
-             // Number 13 is the "Enter" key on the keyboard
-             if (event.keyCode === 13) {
-                 // Cancel the default action, if needed
-                 event.preventDefault();
-                 // Trigger the button element with a click
-                 document.getElementById("searchBTN").click();
-             }
-         });
-      </script>
    </head>
    <body >
       <?php 
@@ -125,8 +110,6 @@
                </div>
             </div>
          </header>
-         <input type="text" id="searchIn" placeholder="Search for names..">
-         <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
          <form action="" name="pform" method="POST">
             <div class="row">
                <div class="col">
@@ -141,6 +124,8 @@
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
          </form>
+         <input type="text" id="searchIn" placeholder="Search for names..">
+         <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
       </div>
       </div>
       <div class="container">
