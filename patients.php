@@ -127,11 +127,8 @@
             <hr>
          </form>
          <!-- search function -->
-         <form action="" method="GET"></form>
+         <form action="search.php" method="POST">
             <div class="row">
-               <div class="col">
-                  <input id="search" name="search" style="margin:10px" type="text" class="form-control" placeholder="Search" required>
-               </div>
                <div class="col">
                   <button style="margin:10px" type="submit" name="searchbtn" class="btn btn-info" >Search</button>
                </div>
@@ -160,8 +157,7 @@
             // if(isset($_POST['searchbtn'])){
             //     if(!empty($_POST['search'])) {
             //      $search = $_POST['search'];
-            //      echo "$search";
-            //      $q1 = "SELECT * from patients WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%'";
+            //      $q1 = "SELECT * from patients WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%' ";
             //      $result1 = mysqli_query($conn, $q1);
             //       while($row = mysqli_fetch_assoc($result1)){
             //       echo "<tr>
