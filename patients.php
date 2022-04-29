@@ -124,8 +124,16 @@
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
          </form>
-         <input type="text" id="searchIn" placeholder="Search for names..">
-         <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
+         <form action="" method="GET"></form>
+            <div class="row">
+               <div class="col">
+                  <input id="search" name="search" style="margin:10px" type="text" class="form-control" placeholder="Search" required>
+               </div>
+               <div class="col">
+                  <button style="margin:10px" type="submit" name="search" class="btn btn-info" >Search</button>
+               </div>
+            </div>
+         </form>
       </div>
       </div>
       <div class="container">
@@ -174,7 +182,8 @@
       $phone = $_POST['phone'];
       $age = $_POST['age'];
       mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')");
-   }
+      echo "<script>window.location.href='patients.php';</script>";
+   }  
         ?>
    <footer>
       <!-- Footer Starts Here -->
