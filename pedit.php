@@ -46,8 +46,13 @@
          }
       </style>
       <script src="assets/js/patients.js"></script>
+      <script>
+         function cancel() {
+                window.location.href = "patients.php";
+            }
+      </script>
    </head>
-   <body >
+   <body>
       <?php 
          $servername = "localhost";
          $username = "root";
@@ -55,10 +60,20 @@
          $dbname = "webproj";
          // Create connection
          $conn = mysqli_connect($servername, $username, $password, $dbname);
-         // Check connection
-         if (!$conn) {
-         die("Connection failed: " . mysqli_connect_error());
+         $id=$_GET['pid'];
+         $name="";
+         $email="";
+         $phone="";
+         $age="";
+
+         $result = mysqli_query($conn,"SELECT * FROM patients where pid='$id'");
+         while($row = mysqli_fetch_assoc($result)) {
+         $name=$row['name'];
+         $email=$row['email'];
+         $phone=$row['phone'];
+         $age=$row['age'];
          }
+
          ?>
       <!-- Pre Header -->
       <div id="pre-header">
@@ -115,7 +130,7 @@
                <div class="col-md-12">
                   <div class="section-heading">
                      <div class="line-dec"></div>
-                     <h1>Patients:</h1>
+                     <h1>Patient data:</h1>
                   </div>
                </div>
             </div>
@@ -123,28 +138,20 @@
          <form action="" name="pform" method="POST">
             <div class="row">
                <div class="col">
-                  <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
-                  <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required value="<?php echo $name; ?>">
+                  <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required value="<?php echo $email; ?>">
                </div>
                <div class="col">
-                  <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
-                  <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required>
+                  <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required value="<?php echo $phone; ?>">
+                  <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required value="<?php echo $age; ?>">
                </div>
             </div>
-            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
-         </form>
+            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Save</button>
+            <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button>
+            <button onclick="cancel()" style="margin:10px" type="button" name="update" class="btn btn-warning">Cancel</button>
+            </form>
       </div>
    </body>
-<?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "webproj";
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
-?>
    <footer>
       <!-- Footer Starts Here -->
       <div class="footer">

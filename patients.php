@@ -164,7 +164,6 @@
             <th>Phone</th>
             <th>Age</th>
             <th>Edit</th>
-            <th>Delete</th>
             </tr>   ";
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `patients`";
@@ -179,7 +178,6 @@
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td>";
                echo "<td>"; ?> <a href="pedit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
-               echo "<td>"; ?> <a href="pdelete.php?pid=<?php echo $row["pid"]; ?>"><button class="btn btn-danger">Delete</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
