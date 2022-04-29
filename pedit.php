@@ -143,7 +143,7 @@
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Save</button>
             <button style="margin:10px" type="submit" name="delete" class="btn btn-danger" >Delete</button>
-            <button onclick="cancel()" style="margin:10px" type="button" name="update" class="btn btn-warning">Cancel</button>
+            <button onclick="cancel()" style="margin:10px" type="button" class="btn btn-warning">Cancel</button>
             </form>
       </div>
    </body>
@@ -170,6 +170,7 @@
             echo "Error deleting record: " . mysqli_error($conn);
          }
       }
+      mysqli_close($conn);
       ?>
    <footer>
       <!-- Footer Starts Here -->

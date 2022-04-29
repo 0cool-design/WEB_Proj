@@ -142,24 +142,26 @@
             <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Age</th>
             <th>Edit</th>
             </tr>   ";
-
+            
             // search funcntion
             if(isset($_POST['searchbtn'])){
                 if(!empty($_POST['search'])) {
                  $search = $_POST['search'];
-                 $q1 = "SELECT * from `products` WHERE CONCAT(id,name,price,quantity) LIKE '%$search%' ";
+                 $q1 = "SELECT * from `patients` WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%' ";
                  $result1 = mysqli_query($conn, $q1);
                   while($row = mysqli_fetch_assoc($result1)){
                   echo "<tr>
-                  <td>" . $row["id"]."</td>".
+                  <td>" . $row["pid"]."</td>".
                   "<td>" . $row["name"]."</td>".
-                  "<td>" . $row["price"]."</td>".
-                  "<td>". $row["quantity"]."</td>";
-                  echo "<td>"; ?> <a href="pedit.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
+                  "<td>" . $row["email"]."</td>".
+                  "<td>" . $row["phone"]."</td>".
+                  "<td>". $row["age"]."</td>";
+                  echo "<td>"; ?> <a href="pedit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
 
                   }
                   echo "</table>";

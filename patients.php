@@ -127,7 +127,7 @@
             <hr>
          </form>
          <!-- search function -->
-         <form action="search.php" method="POST">
+         <form action="psearch.php" method="POST">
             <div class="row">
                <div class="col">
                   <button style="margin:10px" type="submit" name="searchbtn" class="btn btn-info" >Search</button>
