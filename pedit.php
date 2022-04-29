@@ -60,7 +60,7 @@
          $email="";
          $phone="";
          $age="";
-
+         
          $result = mysqli_query($conn,"SELECT * FROM patients where pid='$id'");
          while($row = mysqli_fetch_assoc($result)) {
          $name=$row['name'];
