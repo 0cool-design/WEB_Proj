@@ -115,6 +115,8 @@
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
                   <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
+
                </div>
                <div class="col">
                   <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
@@ -122,7 +124,7 @@
                   <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
                </div>
             </div>
-            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
+            <hr>
          </form>
          <form action="" method="GET"></form>
             <div class="row">
