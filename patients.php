@@ -126,13 +126,14 @@
             </div>
             <hr>
          </form>
+         <!-- search function -->
          <form action="" method="GET"></form>
             <div class="row">
                <div class="col">
                   <input id="search" name="search" style="margin:10px" type="text" class="form-control" placeholder="Search" required>
                </div>
                <div class="col">
-                  <button style="margin:10px" type="submit" name="search" class="btn btn-info" >Search</button>
+                  <button style="margin:10px" type="submit" name="searchbtn" class="btn btn-info" >Search</button>
                </div>
             </div>
          </form>
@@ -154,6 +155,25 @@
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `patients`";
             $result = mysqli_query($conn, $sql);
+            // search funcntion attempt 
+
+            // if(isset($_POST['searchbtn'])){
+            //     if(!empty($_POST['search'])) {
+            //      $search = $_POST['search'];
+            //      echo "$search";
+            //      $q1 = "SELECT * from patients WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%'";
+            //      $result1 = mysqli_query($conn, $q1);
+            //       while($row = mysqli_fetch_assoc($result1)){
+            //       echo "<tr>
+            //       <td>" . $row["pid"]."</td>".
+            //       "<td>" . $row["name"]."</td>".
+            //       "<td>" . $row["email"]."</td>".
+            //       "<td>" . $row["phone"]."</td>".
+            //       "<td>". $row["age"]."</td>";
+            //       }
+            //       echo "</table>";
+            //    }}
+            
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
@@ -167,7 +187,8 @@
                }
                echo "</table>";
 
-               }else {
+               }
+               else {
                echo "No patients were found";
                }
                
