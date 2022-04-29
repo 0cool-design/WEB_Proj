@@ -54,12 +54,7 @@
    </head>
    <body>
       <?php 
-         $servername = "localhost";
-         $username = "root";
-         $password = "";
-         $dbname = "webproj";
-         // Create connection
-         $conn = mysqli_connect($servername, $username, $password, $dbname);
+         include 'dp.php';
          $id=$_GET['pid'];
          $name="";
          $email="";
@@ -152,6 +147,30 @@
             </form>
       </div>
    </body>
+   <?php
+      if(isset($_POST['insert'])){
+         $name=$_POST['name'];
+         $email=$_POST['email'];
+         $phone=$_POST['phone'];
+         $age=$_POST['age'];
+         $sql = "UPDATE patients SET name='$name', email='$email', phone='$phone', age='$age' WHERE pid='$id'";
+         if (mysqli_query($conn, $sql)) {
+            //echo "<script>alert('Patient data updated successfully');</script>";
+            echo "<script>window.location.href='patients.php';</script>";
+         } else {
+            echo "Error updating record: " . mysqli_error($conn);
+         }
+      }
+      if(isset($_POST['delete'])){
+         $sql = "DELETE FROM patients WHERE pid='$id'";
+         if (mysqli_query($conn, $sql)) {
+            //echo "<script>alert('Patient data deleted successfully');</script>";
+            echo "<script>window.location.href='patients.php';</script>";
+         } else {
+            echo "Error deleting record: " . mysqli_error($conn);
+         }
+      }
+      ?>
    <footer>
       <!-- Footer Starts Here -->
       <div class="footer">
