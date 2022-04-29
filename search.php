@@ -13,6 +13,10 @@
          gtag('js', new Date());
          
          gtag('config', 'G-2GC86H6BZ8');
+
+         function back() {
+                window.location.href = "patients.php";
+            }
       </script>
       <meta charset="utf-8">
       <title>Patients</title>
@@ -116,6 +120,7 @@
                </div>
             </div>
          </header>
+         <button onclick="back()" style="margin:10px" type="button" class="btn btn-warning">Back</button>
          <!-- search function -->
          <form action="" method="POST">
             <div class="row">
