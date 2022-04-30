@@ -148,10 +148,13 @@
 
             // search funcntion
             if(isset($_POST['searchbtn'])){
+               //check that search value is not empty
                 if(!empty($_POST['search'])) {
                  $search = $_POST['search'];
+                 //search for the specific data in the table
                  $q1 = "SELECT * from `products` WHERE CONCAT(id,name,price,quantity) LIKE '%$search%' ";
                  $result1 = mysqli_query($conn, $q1);
+                 //print the row of the matched items
                   while($row = mysqli_fetch_assoc($result1)){
                   echo "<tr>
                   <td>" . $row["id"]."</td>".

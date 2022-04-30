@@ -53,12 +53,14 @@
    </head>
    <body>
       <?php 
-         include 'dp.php';
+      //connecting to the SQL database from dp.php file
+      include 'dp.php';
+      //get product id to change or update its data
          $id=$_GET['id'];
          $name="";
          $price="";
          $quantity="";
-         
+         //get all the data of the product selected in variables
          $result = mysqli_query($conn,"SELECT * FROM products where id='$id'");
          while($row = mysqli_fetch_assoc($result)) {
          $name=$row['name'];
@@ -127,6 +129,7 @@
                </div>
             </div>
          </header>
+         <!-- Form to update the products data -->
          <form action="" name="pform" method="POST">
             <div class="row">
                <div class="col">
@@ -144,10 +147,12 @@
       </div>
    </body>
    <?php
+   // update function
       if(isset($_POST['insert'])){
          $name=$_POST['name'];
          $price=$_POST['price'];
          $quantity=$_POST['quantity'];
+         //changing the data values from data entered in the form
          $sql = "UPDATE products SET name='$name', price='$price', quantity='$quantity' WHERE id='$id'";
          if (mysqli_query($conn, $sql)) {
             //echo "<script>alert('Products data updated successfully');</script>";
@@ -156,7 +161,9 @@
             echo "Error updating record: " . mysqli_error($conn);
          }
       }
+      //delete function 
       if(isset($_POST['delete'])){
+         //delete the whole row or product
          $sql = "DELETE FROM products WHERE id='$id'";
          if (mysqli_query($conn, $sql)) {
             //echo "<script>alert('Products data deleted successfully');</script>";

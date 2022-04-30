@@ -48,6 +48,7 @@
    </head>
    <body >
       <?php 
+      //connecting to the SQL database from dp.php file
       include 'dp.php';
          ?>
       <!-- Pre Header -->
@@ -110,6 +111,7 @@
                </div>
             </div>
          </header>
+         <!-- a form used to insert new products to the database -->
          <form action="" name="pform" method="POST">
             <div class="row">
                <div class="col">
@@ -125,7 +127,7 @@
             </div>
             <hr>
          </form>
-         <!-- search function -->
+         <!-- search function form-->
          <form action="search.php" method="POST">
             <div class="row">
                <div class="col">
@@ -139,6 +141,7 @@
       <table id="appont-table" class="table table-hover">
          <!-- table data -->
          <?php
+         //table header
             echo"
             <tr>
             <th>ID</th>
@@ -150,7 +153,7 @@
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `products`";
             $result = mysqli_query($conn, $sql);
-            
+            //check if there are selected rows.
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
@@ -159,6 +162,7 @@
                "<td>" . $row["name"]."</td>".
                "<td>" . $row["price"]."</td>".
                "<td>". $row["quantity"]."</td>";
+               //an edit button that directs to edit.php to update values
                echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
                }
                echo "</table>";
@@ -174,12 +178,15 @@
       </table>
    </body>
    <?php
+   //insert function
    if (isset($_POST['insert'])) {
       $id = $_POST['id'];
       $name = $_POST['name'];
       $price = $_POST['price'];
       $quantity = $_POST['quantity'];
+      //insert the new values to the database
       mysqli_query($conn, "INSERT INTO `products` (`id`,`name`, `price`, `quantity`) VALUES ('$id','$name', '$price', '$quantity')");
+      //works like a refresh to update the page
       echo "<script>window.location.href='calculate.php';</script>";
    }  
         ?>

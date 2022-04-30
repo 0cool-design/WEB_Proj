@@ -1,4 +1,5 @@
 <?php
+// establishing a connection to the SQL database
     $servername = "localhost";
     $username = "root";
     $password = "";
