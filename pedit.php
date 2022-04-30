@@ -6,12 +6,12 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GC86H6BZ8"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
-         
+
          function gtag() {
              dataLayer.push(arguments);
          }
          gtag('js', new Date());
-         
+
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
@@ -53,14 +53,15 @@
       </script>
    </head>
    <body>
-      <?php 
+      <?php
+          //connect to the SQL database from dp.php file
          include 'dp.php';
          $id=$_GET['pid'];
          $name="";
          $email="";
          $phone="";
          $age="";
-         
+         // select data from patients table
          $result = mysqli_query($conn,"SELECT * FROM patients where pid='$id'");
          while($row = mysqli_fetch_assoc($result)) {
          $name=$row['name'];
@@ -148,23 +149,25 @@
       </div>
    </body>
    <?php
+      // if insert button is clicked..
       if(isset($_POST['insert'])){
          $name=$_POST['name'];
          $email=$_POST['email'];
          $phone=$_POST['phone'];
          $age=$_POST['age'];
+         // update the values of the table for the chosen id
          $sql = "UPDATE patients SET name='$name', email='$email', phone='$phone', age='$age' WHERE pid='$id'";
          if (mysqli_query($conn, $sql)) {
-            //echo "<script>alert('Patient data updated successfully');</script>";
             echo "<script>window.location.href='patients.php';</script>";
          } else {
             echo "Error updating record: " . mysqli_error($conn);
          }
       }
+      // if delete button is clicked
       if(isset($_POST['delete'])){
+        // delete the values from the table for the chosen id
          $sql = "DELETE FROM patients WHERE pid='$id'";
          if (mysqli_query($conn, $sql)) {
-            //echo "<script>alert('Patient data deleted successfully');</script>";
             echo "<script>window.location.href='patients.php';</script>";
          } else {
             echo "Error deleting record: " . mysqli_error($conn);
