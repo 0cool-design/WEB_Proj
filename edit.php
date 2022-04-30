@@ -148,6 +148,7 @@
          $name=$_POST['name'];
          $price=$_POST['price'];
          $quantity=$_POST['quantity'];
+         $sql = "UPDATE products SET name='$name', price='$price', quantity='$quantity' WHERE id='$id'";
          if (mysqli_query($conn, $sql)) {
             //echo "<script>alert('Products data updated successfully');</script>";
             echo "<script>window.location.href='calculate.php';</script>";
