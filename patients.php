@@ -6,12 +6,12 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GC86H6BZ8"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
-         
+
          function gtag() {
              dataLayer.push(arguments);
          }
          gtag('js', new Date());
-         
+
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
@@ -47,7 +47,7 @@
       </style>
    </head>
    <body >
-      <?php 
+      <?php
       include 'dp.php';
          ?>
       <!-- Pre Header -->
@@ -126,7 +126,7 @@
             </div>
             <hr>
          </form>
-         <!-- search function -->
+         <!-- patients search function form-->
          <form action="psearch.php" method="POST">
             <div class="row">
                <div class="col">
@@ -140,6 +140,7 @@
       <table id="appont-table" class="table table-hover">
          <!-- table data -->
          <?php
+         //table header
             echo"
             <tr>
             <th>ID</th>
@@ -149,10 +150,10 @@
             <th>Age</th>
             <th>Edit</th>
             </tr>   ";
-            //…else, the rest of code will go here (e.g., insert, update…
+            // select data from patients table
             $sql = "SELECT * FROM `patients`";
             $result = mysqli_query($conn, $sql);
-
+            //check if there are selected rows.
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
@@ -162,30 +163,34 @@
                "<td>" . $row["email"]."</td>".
                "<td>" . $row["phone"]."</td>".
                "<td>". $row["age"]."</td>";
+               //an edit button that directs to pedit.php to update values
                echo "<td>"; ?> <a href="pedit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
-               }
-               else {
-               echo "No patients were found";
-               }
-               
-               echo"<br>";
-      
+            }
+           //if nothing was entered in the search bar message will appear
+           else {
+           echo "No patients were found";
+           }
+
+           echo"<br>";
+
             ?>
       </table>
    </body>
    <?php
+   // insert function
    if (isset($_POST['insert'])) {
       $pid = $_POST['pid'];
       $name = $_POST['name'];
       $email = $_POST['email'];
       $phone = $_POST['phone'];
       $age = $_POST['age'];
+      // insert the new values to the database
       mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')");
       echo "<script>window.location.href='patients.php';</script>";
-   }  
+   }
         ?>
    <footer>
       <!-- Footer Starts Here -->

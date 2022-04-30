@@ -6,12 +6,12 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GC86H6BZ8"></script>
       <script>
          window.dataLayer = window.dataLayer || [];
-         
+
          function gtag() {
              dataLayer.push(arguments);
          }
          gtag('js', new Date());
-         
+
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
@@ -47,7 +47,7 @@
       </style>
    </head>
    <body >
-      <?php 
+      <?php
       //connecting to the SQL database from dp.php file
       include 'dp.php';
          ?>
@@ -150,7 +150,7 @@
             <th>Quantity</th>
             <th>Edit</th>
             </tr>   ";
-            //…else, the rest of code will go here (e.g., insert, update…
+            // select data from products table
             $sql = "SELECT * FROM `products`";
             $result = mysqli_query($conn, $sql);
             //check if there are selected rows.
@@ -167,13 +167,14 @@
                }
                echo "</table>";
 
-               }
-               else {
-               echo "No products were found";
-               }
-               
-               echo"<br>";
-      
+            }
+           //if nothing was entered in the search bar message will appear
+           else {
+           echo "No products were found";
+           }
+
+           echo"<br>";
+
             ?>
       </table>
    </body>
@@ -188,7 +189,7 @@
       mysqli_query($conn, "INSERT INTO `products` (`id`,`name`, `price`, `quantity`) VALUES ('$id','$name', '$price', '$quantity')");
       //works like a refresh to update the page
       echo "<script>window.location.href='calculate.php';</script>";
-   }  
+   }
         ?>
    <footer>
       <!-- Footer Starts Here -->
