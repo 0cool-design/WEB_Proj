@@ -15,7 +15,7 @@
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
-      <title>Patients</title>
+      <title>Products</title>
       <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
       <link rel="stylesheet" href="assets/css/index.css">
       <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -105,7 +105,7 @@
                <div class="col-md-12">
                   <div class="section-heading">
                      <div class="line-dec"></div>
-                     <h1>Patients:</h1>
+                     <h1>Products:</h1>
                   </div>
                </div>
             </div>
@@ -114,20 +114,19 @@
             <div class="row">
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
-                  <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  <input id="id" name="id" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
                   <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
 
                </div>
                <div class="col">
-                  <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
-                  <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required>
-                  <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
+               <input id="price" name="price" style="margin:10px" type="" pattern="[0-9]{1,4}" class="form-control" placeholder="Price" required>
+               <input id="quantity" name="quantity" style="margin:10px" type="" pattern="[0-9]{1,4}" class="form-control" placeholder="Quantity" required>
                </div>
             </div>
             <hr>
          </form>
          <!-- search function -->
-         <form action="psearch.php" method="POST">
+         <form action="search.php" method="POST">
             <div class="row">
                <div class="col">
                   <button style="margin:10px" type="submit" name="searchbtn" class="btn btn-info" >Search</button>
@@ -144,31 +143,29 @@
             <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Age</th>
+            <th>Price</th>
+            <th>Quantity</th>
             <th>Edit</th>
             </tr>   ";
             //…else, the rest of code will go here (e.g., insert, update…
-            $sql = "SELECT * FROM `patients`";
+            $sql = "SELECT * FROM `products`";
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
                echo "<tr>
-               <td>" . $row["pid"]."</td>".
+               <td>" . $row["id"]."</td>".
                "<td>" . $row["name"]."</td>".
-               "<td>" . $row["email"]."</td>".
-               "<td>" . $row["phone"]."</td>".
-               "<td>". $row["age"]."</td>";
-               echo "<td>"; ?> <a href="pedit.php?pid=<?php echo $row["pid"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
+               "<td>" . $row["price"]."</td>".
+               "<td>". $row["quantity"]."</td>";
+               echo "<td>"; ?> <a href="edit.php?id=<?php echo $row["id"]; ?>"><button type="button" class="btn btn-info">Edit</button></a> <?php echo "</td>";
                }
                echo "</table>";
 
                }
                else {
-               echo "No patients were found";
+               echo "No products were found";
                }
                
                echo"<br>";
@@ -178,13 +175,12 @@
    </body>
    <?php
    if (isset($_POST['insert'])) {
-      $pid = $_POST['pid'];
+      $id = $_POST['id'];
       $name = $_POST['name'];
-      $email = $_POST['email'];
-      $phone = $_POST['phone'];
-      $age = $_POST['age'];
-      mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')");
-      echo "<script>window.location.href='patients.php';</script>";
+      $price = $_POST['price'];
+      $quantity = $_POST['quantity'];
+      mysqli_query($conn, "INSERT INTO `products` (`id`,`name`, `price`, `quantity`) VALUES ('$id','$name', '$price', '$quantity')");
+      echo "<script>window.location.href='calculate.php';</script>";
    }  
         ?>
    <footer>
