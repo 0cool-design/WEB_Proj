@@ -134,7 +134,7 @@
                   <input id="price" name="price" style="margin:10px" type="price" pattern="[0-9]{1,4}" class="form-control"  placeholder="Price" required value="<?php echo $price; ?>">
                </div>
                <div class="col">
-                  <input id="quantity" name="quantity" style="margin:10px" type="tel" pattern="[0-9]{1,4}" id="typePhone" class="form-control" placeholder="Phone Number" required value="<?php echo $quantity; ?>">
+                  <input id="quantity" name="quantity" style="margin:10px" pattern="[0-9]{1,4}" id="typePhone" class="form-control" placeholder="Quantity" required value="<?php echo $quantity; ?>">
                </div>
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Save</button>

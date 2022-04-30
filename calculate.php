@@ -114,7 +114,7 @@
             <div class="row">
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
-                  <input id="id" name="id" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
+                  <input id="id" name="id" style="margin:10px" type="" pattern="[a-z0-9]{4}" class="form-control" placeholder="ID" required>
                   <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
 
                </div>
