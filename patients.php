@@ -89,7 +89,7 @@
                      <span class="sr-only">(current)</span>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="contact.html">Contact Us</a>
+                     <a class="nav-link" href="contact.php">Contact Us</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="appointments.html">Book an Appointment</a>
@@ -152,24 +152,7 @@
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `patients`";
             $result = mysqli_query($conn, $sql);
-            // search funcntion attempt 
 
-            // if(isset($_POST['searchbtn'])){
-            //     if(!empty($_POST['search'])) {
-            //      $search = $_POST['search'];
-            //      $q1 = "SELECT * from patients WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%' ";
-            //      $result1 = mysqli_query($conn, $q1);
-            //       while($row = mysqli_fetch_assoc($result1)){
-            //       echo "<tr>
-            //       <td>" . $row["pid"]."</td>".
-            //       "<td>" . $row["name"]."</td>".
-            //       "<td>" . $row["email"]."</td>".
-            //       "<td>" . $row["phone"]."</td>".
-            //       "<td>". $row["age"]."</td>";
-            //       }
-            //       echo "</table>";
-            //    }}
-            
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
@@ -221,7 +204,7 @@
                         <li><a href="feedback.html">Feedback</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="policy.html">Privacy Policy</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                         <li><a href="faq.html">FAQ</a></li>
                      </ul>
                   </div>

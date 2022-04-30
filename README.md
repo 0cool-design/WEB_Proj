@@ -10,7 +10,7 @@
 - [ ] [About Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/about.html) 🚧
 - [ ] [Privacy Policy](https://github.com/0cool-design/WEB_Proj/blob/main/www/policy.html) 🚧
 - [ ] [Feedback Survey](https://github.com/0cool-design/WEB_Proj/blob/main/www/feedback.html) 🚧
-- [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.html) 🚧
+- [ ] [Contact Us](https://github.com/0cool-design/WEB_Proj/blob/main/www/contact.php) 🚧
 - [ ] [My Profile](https://github.com/0cool-design/WEB_Proj/blob/main/www/profile.html) 🚧
 - [ ] [Appointments](https://github.com/0cool-design/WEB_Proj/blob/main/www/appointments.html) 🚧  
 - [ ] [FAQ](https://github.com/0cool-design/WEB_Proj/blob/main/www/faq.html) 🚧
