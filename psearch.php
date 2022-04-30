@@ -146,8 +146,8 @@
             <th>Phone</th>
             <th>Age</th>
             <th>Edit</th>
-            </tr>   ";
-            
+            </tr>";
+
             // search funcntion
             if(isset($_POST['searchbtn'])){
                 if(!empty($_POST['search'])) {

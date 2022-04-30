@@ -115,6 +115,8 @@
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required>
                   <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required>
+                  <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
+
                </div>
                <div class="col">
                   <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required>
@@ -122,10 +124,16 @@
                   <input id="pid" name="pid" style="margin:10px" type="" pattern="[0-9]{4}" class="form-control" placeholder="ID" required>
                </div>
             </div>
-            <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Add Patient</button>
+            <hr>
          </form>
-         <input type="text" id="searchIn" placeholder="Search for names..">
-         <button id="searchBTN" onclick="searchF()"><a><em class="fa fa-search"></em></a></button>
+         <!-- search function -->
+         <form action="psearch.php" method="POST">
+            <div class="row">
+               <div class="col">
+                  <button style="margin:10px" type="submit" name="searchbtn" class="btn btn-info" >Search</button>
+               </div>
+            </div>
+         </form>
       </div>
       </div>
       <div class="container">
@@ -144,6 +152,7 @@
             //…else, the rest of code will go here (e.g., insert, update…
             $sql = "SELECT * FROM `patients`";
             $result = mysqli_query($conn, $sql);
+            
             if (mysqli_num_rows($result) > 0) {
                // output data of each row
                while($row = mysqli_fetch_assoc($result)) {
@@ -157,7 +166,8 @@
                }
                echo "</table>";
 
-               }else {
+               }
+               else {
                echo "No patients were found";
                }
                
@@ -174,7 +184,8 @@
       $phone = $_POST['phone'];
       $age = $_POST['age'];
       mysqli_query($conn, "INSERT INTO `patients` (`pid`,`name`, `email`, `phone`, `age`) VALUES ('$pid','$name', '$email', '$phone', '$age')");
-   }
+      echo "<script>window.location.href='patients.php';</script>";
+   }  
         ?>
    <footer>
       <!-- Footer Starts Here -->

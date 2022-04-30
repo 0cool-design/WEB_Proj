@@ -15,11 +15,11 @@
          gtag('config', 'G-2GC86H6BZ8');
 
          function back() {
-                window.location.href = "patients.php";
+                window.location.href = "calculate.php";
             }
       </script>
       <meta charset="utf-8">
-      <title>Patients</title>
+      <title>Products</title>
       <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
       <link rel="stylesheet" href="assets/css/index.css">
       <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,10 +49,9 @@
          background-color: #dddddd;
          }
       </style>
-      <script src="assets/js/patients.js"></script>
       <script>
          function cancel() {
-                window.location.href = "patients.php";
+                window.location.href = "calculate.php";
             }
       </script>
    </head>
@@ -165,7 +164,7 @@
                   echo "</table>";
                }
                else {
-                echo "No patients were found";
+                echo "No products were found";
                 }}
                 
                 echo"<br>";

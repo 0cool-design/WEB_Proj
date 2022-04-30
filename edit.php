@@ -15,7 +15,7 @@
          gtag('config', 'G-2GC86H6BZ8');
       </script>
       <meta charset="utf-8">
-      <title>Patients</title>
+      <title>Productss</title>
       <link rel="icon" type="image/x-icon" href="assets/imgs/logooo.ico">
       <link rel="stylesheet" href="assets/css/index.css">
       <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,28 +45,25 @@
          background-color: #dddddd;
          }
       </style>
-      <script src="assets/js/patients.js"></script>
       <script>
          function cancel() {
-                window.location.href = "patients.php";
+                window.location.href = "calculate.php";
             }
       </script>
    </head>
    <body>
       <?php 
          include 'dp.php';
-         $id=$_GET['pid'];
+         $id=$_GET['id'];
          $name="";
-         $email="";
-         $phone="";
-         $age="";
+         $price="";
+         $quantity="";
          
-         $result = mysqli_query($conn,"SELECT * FROM patients where pid='$id'");
+         $result = mysqli_query($conn,"SELECT * FROM products where id='$id'");
          while($row = mysqli_fetch_assoc($result)) {
          $name=$row['name'];
-         $email=$row['email'];
-         $phone=$row['phone'];
-         $age=$row['age'];
+         $price=$row['price'];
+         $quantity=$row['quantity'];
          }
 
          ?>
@@ -125,7 +122,7 @@
                <div class="col-md-12">
                   <div class="section-heading">
                      <div class="line-dec"></div>
-                     <h1>Patient data:</h1>
+                     <h1>Products data:</h1>
                   </div>
                </div>
             </div>
@@ -134,11 +131,10 @@
             <div class="row">
                <div class="col">
                   <input id="name" name="name" style="margin:10px" type="text" class="form-control" placeholder="Name" required value="<?php echo $name; ?>">
-                  <input id="email" name="email" style="margin:10px" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" id="inputEmail3" placeholder="Email" required value="<?php echo $email; ?>">
+                  <input id="price" name="price" style="margin:10px" type="price" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control"  placeholder="Price" required value="<?php echo $price; ?>">
                </div>
                <div class="col">
-                  <input id="phone" name="phone" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required value="<?php echo $phone; ?>">
-                  <input id="age" name="age" style="margin:10px" type="" pattern="[0-9]{1,3}" class="form-control" placeholder="Age" required value="<?php echo $age; ?>">
+                  <input id="quantity" name="quantity" style="margin:10px" type="tel" pattern="[0-9]{8}" id="typePhone" class="form-control" placeholder="Phone Number" required value="<?php echo $quantity; ?>">
                </div>
             </div>
             <button style="margin:10px" type="submit" name="insert" class="btn btn-success" >Save</button>
@@ -150,22 +146,20 @@
    <?php
       if(isset($_POST['insert'])){
          $name=$_POST['name'];
-         $email=$_POST['email'];
-         $phone=$_POST['phone'];
-         $age=$_POST['age'];
-         $sql = "UPDATE patients SET name='$name', email='$email', phone='$phone', age='$age' WHERE pid='$id'";
+         $price=$_POST['price'];
+         $quantity=$_POST['quantity'];
          if (mysqli_query($conn, $sql)) {
-            //echo "<script>alert('Patient data updated successfully');</script>";
-            echo "<script>window.location.href='patients.php';</script>";
+            //echo "<script>alert('Productsdata updated successfully');</script>";
+            echo "<script>window.location.href='calculate.php';</script>";
          } else {
             echo "Error updating record: " . mysqli_error($conn);
          }
       }
       if(isset($_POST['delete'])){
-         $sql = "DELETE FROM patients WHERE pid='$id'";
+         $sql = "DELETE FROM products WHERE id='$id'";
          if (mysqli_query($conn, $sql)) {
-            //echo "<script>alert('Patient data deleted successfully');</script>";
-            echo "<script>window.location.href='patients.php';</script>";
+            //echo "<script>alert('Productsdata deleted successfully');</script>";
+            echo "<script>window.location.href='calculate.php';</script>";
          } else {
             echo "Error deleting record: " . mysqli_error($conn);
          }
