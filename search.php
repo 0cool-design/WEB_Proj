@@ -57,6 +57,8 @@
    </head>
    <body>
       <?php 
+         //connecting to the SQL database from dp.php file
+
          include 'dp.php'; 
          ?>
       <!-- Pre Header -->
@@ -120,7 +122,7 @@
             </div>
          </header>
          <button onclick="back()" style="margin:10px" type="button" class="btn btn-warning">Back</button>
-         <!-- search function -->
+         <!-- search function form-->
          <form action="" method="POST">
             <div class="row">
                <div class="col">

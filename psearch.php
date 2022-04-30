@@ -58,6 +58,8 @@
    </head>
    <body>
       <?php 
+         //connecting to the SQL database from dp.php file
+
          include 'dp.php'; 
          ?>
       <!-- Pre Header -->
@@ -120,8 +122,9 @@
                </div>
             </div>
          </header>
+         <!-- button to get back to the previous page -->
          <button onclick="back()" style="margin:10px" type="button" class="btn btn-warning">Back</button>
-         <!-- search function -->
+         <!-- search function form-->
          <form action="" method="POST">
             <div class="row">
                <div class="col">
@@ -138,6 +141,7 @@
       <table id="appont-table" class="table table-hover">
          <!-- table data -->
          <?php
+         //table header
             echo"
             <tr>
             <th>ID</th>
@@ -150,10 +154,13 @@
 
             // search funcntion
             if(isset($_POST['searchbtn'])){
+               //check that search value is not empty
                 if(!empty($_POST['search'])) {
                  $search = $_POST['search'];
+                 //search for the specific data in the table
                  $q1 = "SELECT * from `patients` WHERE CONCAT(pid,name,email,phone,age) LIKE '%$search%' ";
                  $result1 = mysqli_query($conn, $q1);
+                 //print the row of the matched items
                   while($row = mysqli_fetch_assoc($result1)){
                   echo "<tr>
                   <td>" . $row["pid"]."</td>".
