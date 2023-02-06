@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/0cool-design/WEB_Proj/blob/main/www/assets/imgs/logooo.png">
+  <img src="https://github.com/0cool-design/WEB_Proj/blob/main/assets/imgs/logooo.png">
 </p>
 
 # [__Clinicom__](https://0cool-design.github.io/WEB_Proj/)
